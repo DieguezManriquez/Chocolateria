@@ -43,32 +43,32 @@ namespace Chocoloco
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    public partial class db_chocolateriaEntities14 : ObjectContext
+    public partial class db_chocolateriaEntities15 : ObjectContext
     {
         #region Constructores
     
         /// <summary>
-        /// Inicializa un nuevo objeto db_chocolateriaEntities14 usando la cadena de conexión encontrada en la sección 'db_chocolateriaEntities14' del archivo de configuración de la aplicación.
+        /// Inicializa un nuevo objeto db_chocolateriaEntities15 usando la cadena de conexión encontrada en la sección 'db_chocolateriaEntities15' del archivo de configuración de la aplicación.
         /// </summary>
-        public db_chocolateriaEntities14() : base("name=db_chocolateriaEntities14", "db_chocolateriaEntities14")
+        public db_chocolateriaEntities15() : base("name=db_chocolateriaEntities15", "db_chocolateriaEntities15")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Inicializar un nuevo objeto db_chocolateriaEntities14.
+        /// Inicializar un nuevo objeto db_chocolateriaEntities15.
         /// </summary>
-        public db_chocolateriaEntities14(string connectionString) : base(connectionString, "db_chocolateriaEntities14")
+        public db_chocolateriaEntities15(string connectionString) : base(connectionString, "db_chocolateriaEntities15")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Inicializar un nuevo objeto db_chocolateriaEntities14.
+        /// Inicializar un nuevo objeto db_chocolateriaEntities15.
         /// </summary>
-        public db_chocolateriaEntities14(EntityConnection connection) : base(connection, "db_chocolateriaEntities14")
+        public db_chocolateriaEntities15(EntityConnection connection) : base(connection, "db_chocolateriaEntities15")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
