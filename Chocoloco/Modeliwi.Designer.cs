@@ -43,32 +43,32 @@ namespace Chocoloco
     /// <summary>
     /// No hay documentación de metadatos disponible.
     /// </summary>
-    public partial class db_chocolateriaEntities15 : ObjectContext
+    public partial class db_chocolateriaEntitiesy : ObjectContext
     {
         #region Constructores
     
         /// <summary>
-        /// Inicializa un nuevo objeto db_chocolateriaEntities15 usando la cadena de conexión encontrada en la sección 'db_chocolateriaEntities15' del archivo de configuración de la aplicación.
+        /// Inicializa un nuevo objeto db_chocolateriaEntitiesy usando la cadena de conexión encontrada en la sección 'db_chocolateriaEntitiesy' del archivo de configuración de la aplicación.
         /// </summary>
-        public db_chocolateriaEntities15() : base("name=db_chocolateriaEntities15", "db_chocolateriaEntities15")
+        public db_chocolateriaEntitiesy() : base("name=db_chocolateriaEntitiesy", "db_chocolateriaEntitiesy")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Inicializar un nuevo objeto db_chocolateriaEntities15.
+        /// Inicializar un nuevo objeto db_chocolateriaEntitiesy.
         /// </summary>
-        public db_chocolateriaEntities15(string connectionString) : base(connectionString, "db_chocolateriaEntities15")
+        public db_chocolateriaEntitiesy(string connectionString) : base(connectionString, "db_chocolateriaEntitiesy")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Inicializar un nuevo objeto db_chocolateriaEntities15.
+        /// Inicializar un nuevo objeto db_chocolateriaEntitiesy.
         /// </summary>
-        public db_chocolateriaEntities15(EntityConnection connection) : base(connection, "db_chocolateriaEntities15")
+        public db_chocolateriaEntitiesy(EntityConnection connection) : base(connection, "db_chocolateriaEntitiesy")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -646,6 +646,30 @@ namespace Chocoloco
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
+        public Nullable<global::System.Int32> pag_id
+        {
+            get
+            {
+                return _pag_id;
+            }
+            set
+            {
+                Onpag_idChanging(value);
+                ReportPropertyChanging("pag_id");
+                _pag_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("pag_id");
+                Onpag_idChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _pag_id;
+        partial void Onpag_idChanging(Nullable<global::System.Int32> value);
+        partial void Onpag_idChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
         public Nullable<global::System.Int32> ped_id
         {
             get
@@ -688,30 +712,6 @@ namespace Chocoloco
         private global::System.String _usu_nombre;
         partial void Onusu_nombreChanging(global::System.String value);
         partial void Onusu_nombreChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> pag_id
-        {
-            get
-            {
-                return _pag_id;
-            }
-            set
-            {
-                Onpag_idChanging(value);
-                ReportPropertyChanging("pag_id");
-                _pag_id = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("pag_id");
-                Onpag_idChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _pag_id;
-        partial void Onpag_idChanging(Nullable<global::System.Int32> value);
-        partial void Onpag_idChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -1267,14 +1267,14 @@ namespace Chocoloco
         /// Crear un nuevo objeto Pago.
         /// </summary>
         /// <param name="pag_id">Valor inicial de la propiedad pag_id.</param>
-        /// <param name="tip_id">Valor inicial de la propiedad tip_id.</param>
         /// <param name="bol_Id">Valor inicial de la propiedad bol_Id.</param>
-        public static Pago CreatePago(global::System.Int32 pag_id, global::System.Int32 tip_id, global::System.Int32 bol_Id)
+        /// <param name="tip_id">Valor inicial de la propiedad tip_id.</param>
+        public static Pago CreatePago(global::System.Int32 pag_id, global::System.Int32 bol_Id, global::System.Int32 tip_id)
         {
             Pago pago = new Pago();
             pago.pag_id = pag_id;
-            pago.tip_id = tip_id;
             pago.bol_Id = bol_Id;
+            pago.tip_id = tip_id;
             return pago;
         }
 
@@ -1314,30 +1314,6 @@ namespace Chocoloco
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 tip_id
-        {
-            get
-            {
-                return _tip_id;
-            }
-            set
-            {
-                Ontip_idChanging(value);
-                ReportPropertyChanging("tip_id");
-                _tip_id = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("tip_id");
-                Ontip_idChanged();
-            }
-        }
-        private global::System.Int32 _tip_id;
-        partial void Ontip_idChanging(global::System.Int32 value);
-        partial void Ontip_idChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.Int32 bol_Id
         {
             get
@@ -1356,6 +1332,30 @@ namespace Chocoloco
         private global::System.Int32 _bol_Id;
         partial void Onbol_IdChanging(global::System.Int32 value);
         partial void Onbol_IdChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 tip_id
+        {
+            get
+            {
+                return _tip_id;
+            }
+            set
+            {
+                Ontip_idChanging(value);
+                ReportPropertyChanging("tip_id");
+                _tip_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("tip_id");
+                Ontip_idChanged();
+            }
+        }
+        private global::System.Int32 _tip_id;
+        partial void Ontip_idChanging(global::System.Int32 value);
+        partial void Ontip_idChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -2467,6 +2467,30 @@ namespace Chocoloco
         private Nullable<global::System.DateTime> _sto_fechaVencimiento;
         partial void Onsto_fechaVencimientoChanging(Nullable<global::System.DateTime> value);
         partial void Onsto_fechaVencimientoChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> sto_cantidad
+        {
+            get
+            {
+                return _sto_cantidad;
+            }
+            set
+            {
+                Onsto_cantidadChanging(value);
+                ReportPropertyChanging("sto_cantidad");
+                _sto_cantidad = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("sto_cantidad");
+                Onsto_cantidadChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _sto_cantidad;
+        partial void Onsto_cantidadChanging(Nullable<global::System.Int32> value);
+        partial void Onsto_cantidadChanged();
 
         #endregion
 
@@ -3064,30 +3088,6 @@ namespace Chocoloco
         /// <summary>
         /// No hay documentación de metadatos disponible.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Int32> pri_id
-        {
-            get
-            {
-                return _pri_id;
-            }
-            set
-            {
-                Onpri_idChanging(value);
-                ReportPropertyChanging("pri_id");
-                _pri_id = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("pri_id");
-                Onpri_idChanged();
-            }
-        }
-        private Nullable<global::System.Int32> _pri_id;
-        partial void Onpri_idChanging(Nullable<global::System.Int32> value);
-        partial void Onpri_idChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String per_rut
@@ -3108,6 +3108,30 @@ namespace Chocoloco
         private global::System.String _per_rut;
         partial void Onper_rutChanging(global::System.String value);
         partial void Onper_rutChanged();
+    
+        /// <summary>
+        /// No hay documentación de metadatos disponible.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> pri_id
+        {
+            get
+            {
+                return _pri_id;
+            }
+            set
+            {
+                Onpri_idChanging(value);
+                ReportPropertyChanging("pri_id");
+                _pri_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("pri_id");
+                Onpri_idChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _pri_id;
+        partial void Onpri_idChanging(Nullable<global::System.Int32> value);
+        partial void Onpri_idChanged();
     
         /// <summary>
         /// No hay documentación de metadatos disponible.
@@ -3180,30 +3204,6 @@ namespace Chocoloco
         private Nullable<global::System.Boolean> _usu_activo;
         partial void Onusu_activoChanging(Nullable<global::System.Boolean> value);
         partial void Onusu_activoChanged();
-    
-        /// <summary>
-        /// No hay documentación de metadatos disponible.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> usu_log
-        {
-            get
-            {
-                return _usu_log;
-            }
-            set
-            {
-                Onusu_logChanging(value);
-                ReportPropertyChanging("usu_log");
-                _usu_log = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("usu_log");
-                Onusu_logChanged();
-            }
-        }
-        private Nullable<global::System.Boolean> _usu_log;
-        partial void Onusu_logChanging(Nullable<global::System.Boolean> value);
-        partial void Onusu_logChanged();
 
         #endregion
 

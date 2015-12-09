@@ -12,7 +12,7 @@ namespace Chocoloco
 {
     public partial class InicioSesionU : System.Web.UI.Page
     {
-        db_chocolateriaEntities14 choco = new db_chocolateriaEntities14();
+        db_chocolateriaEntitiesy choco = new db_chocolateriaEntitiesy();
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -34,20 +34,8 @@
             <asp:GridView ID="dtgProductos" runat="server" AllowPaging="True"  CellPadding="4" 
                 ForeColor="#333333" GridLines="None" 
                 onselectedindexchanged="dtgProductos_SelectedIndexChanged" 
-                AutoGenerateColumns="False" DataKeyNames="pro_Id" 
-                DataSourceID="EntityDataSource1">
+                AutoGenerateColumns="False">
                 <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                <Columns>
-                    <asp:CommandField ShowEditButton="True" />
-                    <asp:BoundField DataField="pro_Id" HeaderText="pro_Id" ReadOnly="True" 
-                        SortExpression="pro_Id" />
-                    <asp:BoundField DataField="cat_id" HeaderText="cat_id" 
-                        SortExpression="cat_id" />
-                    <asp:BoundField DataField="pro_Nombre" HeaderText="pro_Nombre" 
-                        SortExpression="pro_Nombre" />
-                    <asp:BoundField DataField="pro_Precio" HeaderText="pro_Precio" 
-                        SortExpression="pro_Precio" />
-                </Columns>
                 <EditRowStyle BackColor="#999999" />
                 <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
                 <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

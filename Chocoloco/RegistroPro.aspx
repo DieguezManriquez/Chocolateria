@@ -2,8 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-<script type="text/javascript" >
+<script type="text/javascript" src="jquery/jquery-1.9.1/jquery-1.9.1.js">
+</script>
+<script type="text/javascript" src="js/jsMaster.js">
+</script>
+<script type="text/javascript" src="js/validCampoFranz.js">
+</script>
+<script type="text/javascript" src="js/RegistroPro.js">
 
 </script>
     <div id="contenido"> 
@@ -12,7 +17,7 @@
     <tr>
     <td>Nombre:</td>
     <td> 
-        <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="txtNombre" runat="server" required="true"></asp:TextBox></td>
     </tr>
     <tr>
     <td>Categoria:</td>
@@ -29,12 +34,12 @@
     <tr>
     <td>Precio:</td>
     <td> 
-        <asp:TextBox ID="txtPrecio" runat="server"></asp:TextBox></td>
+        <asp:TextBox ID="txtPrecio" runat="server" required="true"></asp:TextBox></td>
     </tr>
     <tr>
     <td>Imagen:</td>
     <td> 
-        <asp:FileUpload ID="FileUpload1" runat="server" onkeypress="validar(letras)" />
+        <asp:FileUpload ID="FileUpload1" runat="server" required="true"/>
         </td>
     </tr>
     

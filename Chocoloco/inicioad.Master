@@ -8,6 +8,15 @@
     <link href="css/EstiloAdmin.css" type="text/css" rel="Stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <script type="text/javascript" src="jquery/jquery-1.9.1/jquery-1.9.1.js">
+</script>
+<script type="text/javascript" src="js/jsMaster.js">
+</script>
+<script type="text/javascript" src="js/validCampoFranz.js">
+</script>
+
+
 </head>
 <body>
    <form id="form1" runat="server">
@@ -23,6 +32,7 @@
                     <ul class="submenu">
                         <li><a href="RegistroPro.aspx">Registrar Producto</a></li>
                         <li><a href="EditarPro.aspx">Editar Producto</a> </li>
+                        <li><a href=".aspx">Registrar Stock</a> </li>
                         <li><a href="ListarPro.aspx">Listar Productos</a></li>
                     </ul>
                 </li>

@@ -11,7 +11,7 @@ namespace Chocoloco
 {
     public partial class RegistroPro : System.Web.UI.Page
     {
-        db_chocolateriaEntities14 choco = new db_chocolateriaEntities14();
+        db_chocolateriaEntitiesy choco = new db_chocolateriaEntitiesy();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -70,8 +70,7 @@ namespace Chocoloco
             else
             {
 
-                if (pr.pro_Imagen == null)
-                {
+                
                     int id = int.Parse(cbbCategoria.SelectedValue);
                     Categoria c = choco.Categoria.FirstOrDefault(x => x.cat_id == id);
                     Producto p = new Producto();
@@ -84,10 +83,7 @@ namespace Chocoloco
                     choco.SaveChanges();
 
                     SaveFile(FileUpload1.PostedFile);
-                }
-                else {
-                    Response.Write("<script>alert('Debe ingresar una imagen para el producto')</script>");
-                }
+               
             }
         }
             

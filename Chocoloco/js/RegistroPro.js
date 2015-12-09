@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    validar('txtNombre', 'id', 'letras');
-    validar('txtPrecio', 'id', 'numero');
+    validar('ContentPlaceHolder1_txtNombre', 'id', 'letras');
+    validar('ContentPlaceHolder1_txtPrecio', 'id', 'numero');
 
 }
 );

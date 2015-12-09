@@ -4,10 +4,16 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Pantuflin</title>
+    <title>Chocolateria Joufflu</title>
         <link href="css/EstiloBase.css" type="text/css" rel="Stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <script type="text/javascript" src="js/jsMaster.js">
+</script>
+<script type="text/javascript" src="js/validCampoFranz.js">
+</script>
+    
+
 </head>
 <body>
     <form id="form1" runat="server">

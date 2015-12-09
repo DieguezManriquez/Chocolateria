@@ -57,3 +57,23 @@ function validar(id, atributo,tipo){
 	
 }
 
+function tabla(id) {
+    $('#' + id + '').DataTable({
+        "sPaginationType": "full_numbers",
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ Resultados por pagina.",
+            "zeroRecords": "0 resultados de busqueda.",
+            "info": "Mostrando pagina _PAGE_ de _PAGES_",
+            "infoEmpty": "Sin resultados disponibles",
+            "infoFiltered": "(Filtrando en  _MAX_  registros)",
+            "search": "Buscar",
+            "searchPlaceholder": "Buscar...",
+            "paginate": {
+                "first": "Primera Pagina",
+                "last": "Ultima pagina",
+                "previous": "Atras",
+                "next": "Siguiente"
+            }
+        }
+    });
+}

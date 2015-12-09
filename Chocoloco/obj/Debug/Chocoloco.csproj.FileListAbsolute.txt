@@ -8,3 +8,8 @@ C:\Users\Rabbit\Desktop\Nueva carpeta\Chocolocoji\Chocolocoji\Chocoloco\obj\Debu
 C:\Users\Rabbit\Desktop\Nueva carpeta\Chocolocoji\Chocolocoji\Chocoloco\obj\Debug\Chocoloco.pdb
 C:\Users\Rabbit\Desktop\Nueva carpeta\Chocolocoji\Chocolocoji\Chocoloco\bin\Chocoloco.dll
 C:\Users\Rabbit\Desktop\Nueva carpeta\Chocolocoji\Chocolocoji\Chocoloco\bin\Chocoloco.pdb
+C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\obj\Debug\Chocoloco.csprojResolveAssemblyReference.cache
+C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\obj\Debug\Chocoloco.dll
+C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\obj\Debug\Chocoloco.pdb
+C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\bin\Chocoloco.dll
+C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\bin\Chocoloco.pdb

@@ -58,9 +58,19 @@
     <Content Include="Bombones.aspx" />
     <Content Include="Calugas.aspx" />
     <Content Include="Contacto.aspx" />
+    <Content Include="ControlarProductos.aspx" />
     <Content Include="CrearCuentaU.aspx" />
     <Content Include="css\EstiloAdmin.css" />
     <Content Include="css\EstiloBase.css" />
+    <Content Include="datatable\dataTables.jqueryui.min.css" />
+    <Content Include="datatable\dataTables.jqueryui_.css" />
+    <Content Include="datatable\images\favicon.ico" />
+    <Content Include="datatable\images\sort_asc.png" />
+    <Content Include="datatable\images\sort_asc_disabled.png" />
+    <Content Include="datatable\images\sort_both.png" />
+    <Content Include="datatable\images\sort_desc.png" />
+    <Content Include="datatable\images\sort_desc_disabled.png" />
+    <Content Include="datatable\jquery.dataTables.js" />
     <Content Include="EditarCuentaU.aspx" />
     <Content Include="EditarPro.aspx" />
     <Content Include="EstadoPedidos.aspx" />
@@ -93,6 +103,68 @@
     <Content Include="Inicio.aspx" />
     <Content Include="InicioAD.aspx" />
     <Content Include="InicioSesionU.aspx" />
+    <Content Include="jquery\jquery-1.9.1.js" />
+    <Content Include="jquery\jquery-1.9.1\jquery-1.9.1.js" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\external\jquery\jquery.js" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_734d99_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\index.html" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.js" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.min.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.min.js" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.structure.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.structure.min.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.theme.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui.theme.min.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom\jquery-ui_.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-icons_734d99_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui.js" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui.theme.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui.theme.min.css" />
+    <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui_.css" />
+    <Content Include="js\ControlarProductos.js" />
     <Content Include="js\jsMaster.js" />
     <Content Include="js\RegistroPro.js" />
     <Content Include="js\validCampoFranz.js" />
@@ -106,6 +178,7 @@
     <Content Include="PreguntasFrecuentes.aspx" />
     <Content Include="ProdPopulares.aspx" />
     <Content Include="ProductoEsta.aspx" />
+    <Content Include="RegistrarStock.aspx" />
     <Content Include="RegistroPro.aspx" />
     <Content Include="Resultado.aspx" />
     <Content Include="Resultadoad.aspx" />
@@ -148,6 +221,13 @@
     </Compile>
     <Compile Include="Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlarProductos.aspx.cs">
+      <DependentUpon>ControlarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlarProductos.aspx.designer.cs">
+      <DependentUpon>ControlarProductos.aspx</DependentUpon>
     </Compile>
     <Compile Include="CrearCuentaU.aspx.cs">
       <DependentUpon>CrearCuentaU.aspx</DependentUpon>
@@ -240,10 +320,10 @@
     <Compile Include="MiCuenta.aspx.designer.cs">
       <DependentUpon>MiCuenta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="Modeliwi.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Modeliwi.edmx</DependentUpon>
     </Compile>
     <Compile Include="Nosotros.aspx.cs">
       <DependentUpon>Nosotros.aspx</DependentUpon>
@@ -295,6 +375,13 @@
       <DependentUpon>ProductoEsta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarStock.aspx.cs">
+      <DependentUpon>RegistrarStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistrarStock.aspx.designer.cs">
+      <DependentUpon>RegistrarStock.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistroPro.aspx.cs">
       <DependentUpon>RegistroPro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -329,9 +416,10 @@
     <Content Include="inicioad.Master" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Model1.edmx">
+    <None Include="datatable\images\Sorting icons.psd" />
+    <EntityDeploy Include="Modeliwi.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Modeliwi.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

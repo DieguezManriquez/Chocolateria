@@ -11,7 +11,7 @@ namespace Chocoloco
 {
     public partial class CrearCuentaU : System.Web.UI.Page
     {
-        db_chocolateriaEntities14 choco = new db_chocolateriaEntities14();
+        db_chocolateriaEntitiesy choco = new db_chocolateriaEntitiesy();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,10 +21,10 @@ namespace Chocoloco
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            Label1.Text = txtFecha.Text;
+            
             string rut = txtRut.Text;
 
-            DateTime fecha = DateTime.Parse(txtFecha.Text);
+            //DateTime fecha = DateTime.Parse(txtFecha.Text);
 
             Persona p = choco.Persona.FirstOrDefault(x => x.per_rut == rut); 
             Response.Write("<script>alert(fecha)</script>");
@@ -37,7 +37,7 @@ namespace Chocoloco
                 per.per_apellidoM = txtApM.Text;
                 per.per_direccion = txtDireccion.Text;
                 per.per_telefono = int.Parse(txtTelefono.Text);
-                per.per_fechaNac = fecha;
+                //per.per_fechaNac = fecha;
                // p.per_fechaNac = txtFecha.Text;
                 choco.Persona.AddObject(per);
                 Usuario u = new Usuario();

@@ -86,11 +86,11 @@
             <asp:Button ID="Button1" runat="server" Text="Crear cuenta" BackColor="#221100" BorderColor="#221100"
                 Height="50" Width="100" ForeColor="White" onclick="Button1_Click" />
         </ul>
-        <asp:Label
+        <!--<asp:Label
     AssociatedControlID="txtFecha" 
     ID="Label1" 
     runat="server">
-</asp:Label>
+</asp:Label>-->
 &nbsp;
          </div>
     </div>

@@ -82,7 +82,7 @@
           <Key>
             <PropertyRef Name="bol_Id" />
           </Key>
-          <Property Name="bol_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bol_Id" Type="int" Nullable="false" />
           <Property Name="bol_Detalle" Type="int" />
           <Property Name="bol_Nombre_Chocolateria" Type="varchar" MaxLength="254" />
         </EntityType>
@@ -90,18 +90,18 @@
           <Key>
             <PropertyRef Name="car_id" />
           </Key>
-          <Property Name="car_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="car_id" Type="int" Nullable="false" />
+          <Property Name="pag_id" Type="int" />
           <Property Name="ped_id" Type="int" />
           <Property Name="usu_nombre" Type="varchar" Nullable="false" MaxLength="254" />
-          <Property Name="pag_id" Type="int" />
-          <Property Name="car_fecha" Type="date" />
+          <Property Name="car_fecha" Type="datetime" />
           <Property Name="car_total" Type="int" />
         </EntityType>
         <EntityType Name="Categoria">
           <Key>
             <PropertyRef Name="cat_id" />
           </Key>
-          <Property Name="cat_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cat_id" Type="int" Nullable="false" />
           <Property Name="cat_nombre" Type="varchar" MaxLength="254" />
         </EntityType>
         <EntityType Name="Detalle_Producto">
@@ -110,7 +110,7 @@
             <PropertyRef Name="det_Id" />
           </Key>
           <Property Name="car_id" Type="int" Nullable="false" />
-          <Property Name="det_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="det_Id" Type="int" Nullable="false" />
           <Property Name="pro_Id" Type="int" Nullable="false" />
           <Property Name="det_cantidad" Type="int" />
           <Property Name="det_valor_unitario" Type="int" />
@@ -119,20 +119,20 @@
           <Key>
             <PropertyRef Name="pag_id" />
           </Key>
-          <Property Name="pag_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="tip_id" Type="int" Nullable="false" />
+          <Property Name="pag_id" Type="int" Nullable="false" />
           <Property Name="bol_Id" Type="int" Nullable="false" />
+          <Property Name="tip_id" Type="int" Nullable="false" />
           <Property Name="pag_nombre" Type="varchar" MaxLength="254" />
         </EntityType>
         <EntityType Name="Pedido">
           <Key>
             <PropertyRef Name="ped_id" />
           </Key>
-          <Property Name="ped_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ped_id" Type="int" Nullable="false" />
           <Property Name="est_id" Type="int" Nullable="false" />
           <Property Name="tar_id" Type="int" />
           <Property Name="ped_activo" Type="bit" />
-          <Property Name="ped_fechaEnvio" Type="date" />
+          <Property Name="ped_fechaEnvio" Type="datetime" />
           <Property Name="ped_direccionEnvio" Type="varchar" MaxLength="254" />
         </EntityType>
         <EntityType Name="Persona">
@@ -145,7 +145,7 @@
           <Property Name="per_apellidoM" Type="varchar" MaxLength="254" />
           <Property Name="per_direccion" Type="varchar" MaxLength="254" />
           <Property Name="per_telefono" Type="int" />
-          <Property Name="per_fechaNac" Type="date" />
+          <Property Name="per_fechaNac" Type="datetime" />
         </EntityType>
         <EntityType Name="Privilegios">
           <Key>
@@ -158,7 +158,7 @@
           <Key>
             <PropertyRef Name="pro_Id" />
           </Key>
-          <Property Name="pro_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pro_Id" Type="int" Nullable="false" />
           <Property Name="cat_id" Type="int" Nullable="false" />
           <Property Name="pro_Nombre" Type="varchar" MaxLength="254" />
           <Property Name="pro_Precio" Type="int" />
@@ -168,16 +168,17 @@
           <Key>
             <PropertyRef Name="sto_id" />
           </Key>
-          <Property Name="sto_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="sto_id" Type="int" Nullable="false" />
           <Property Name="pro_Id" Type="int" />
-          <Property Name="sto_fechaRegistro" Type="date" />
-          <Property Name="sto_fechaVencimiento" Type="date" />
+          <Property Name="sto_fechaRegistro" Type="datetime" />
+          <Property Name="sto_fechaVencimiento" Type="datetime" />
+          <Property Name="sto_cantidad" Type="int" />
         </EntityType>
         <EntityType Name="Tarjeta">
           <Key>
             <PropertyRef Name="tar_id" />
           </Key>
-          <Property Name="tar_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tar_id" Type="int" Nullable="false" />
           <Property Name="tipota_id" Type="int" Nullable="false" />
           <Property Name="tar_texto" Type="varchar" MaxLength="254" />
         </EntityType>
@@ -207,12 +208,11 @@
             <PropertyRef Name="usu_nombre" />
           </Key>
           <Property Name="usu_nombre" Type="varchar" Nullable="false" MaxLength="254" />
-          <Property Name="pri_id" Type="int" />
           <Property Name="per_rut" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="pri_id" Type="int" />
           <Property Name="usu_contrasena" Type="varchar" MaxLength="254" />
           <Property Name="usu_correo" Type="varchar" MaxLength="254" />
           <Property Name="usu_activo" Type="bit" />
-          <Property Name="usu_log" Type="bit" />
         </EntityType>
         <Association Name="FK_CARRO_CO_ASSOCIATI_USUARIO">
           <End Role="Usuario" Type="db_chocolateriaModel.Store.Usuario" Multiplicity="1" />
@@ -387,7 +387,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="db_chocolateriaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="db_chocolateriaEntities15" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="db_chocolateriaEntitiesy" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Boleta" EntityType="db_chocolateriaModel.Boleta" />
           <EntitySet Name="Carro_Compra" EntityType="db_chocolateriaModel.Carro_Compra" />
           <EntitySet Name="Categoria" EntityType="db_chocolateriaModel.Categoria" />
@@ -464,7 +464,7 @@
           <Key>
             <PropertyRef Name="bol_Id" />
           </Key>
-          <Property Name="bol_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bol_Id" Type="Int32" Nullable="false" />
           <Property Name="bol_Detalle" Type="Int32" />
           <Property Name="bol_Nombre_Chocolateria" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Pago" Relationship="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA" FromRole="Boleta" ToRole="Pago" />
@@ -473,10 +473,10 @@
           <Key>
             <PropertyRef Name="car_id" />
           </Key>
-          <Property Name="car_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="car_id" Type="Int32" Nullable="false" />
+          <Property Name="pag_id" Type="Int32" />
           <Property Name="ped_id" Type="Int32" />
           <Property Name="usu_nombre" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
-          <Property Name="pag_id" Type="Int32" />
           <Property Name="car_fecha" Type="DateTime" />
           <Property Name="car_total" Type="Int32" />
           <NavigationProperty Name="Usuario" Relationship="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO" FromRole="Carro_Compra" ToRole="Usuario" />
@@ -488,7 +488,7 @@
           <Key>
             <PropertyRef Name="cat_id" />
           </Key>
-          <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat_id" Type="Int32" Nullable="false" />
           <Property Name="cat_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Producto" Relationship="db_chocolateriaModel.FK_PRODUCTO_CATEGORIA_CATEGORI" FromRole="Categoria" ToRole="Producto" />
         </EntityType>
@@ -498,7 +498,7 @@
             <PropertyRef Name="det_Id" />
           </Key>
           <Property Name="car_id" Type="Int32" Nullable="false" />
-          <Property Name="det_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="det_Id" Type="Int32" Nullable="false" />
           <Property Name="pro_Id" Type="Int32" Nullable="false" />
           <Property Name="det_cantidad" Type="Int32" />
           <Property Name="det_valor_unitario" Type="Int32" />
@@ -509,9 +509,9 @@
           <Key>
             <PropertyRef Name="pag_id" />
           </Key>
-          <Property Name="pag_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="tip_id" Type="Int32" Nullable="false" />
+          <Property Name="pag_id" Type="Int32" Nullable="false" />
           <Property Name="bol_Id" Type="Int32" Nullable="false" />
+          <Property Name="tip_id" Type="Int32" Nullable="false" />
           <Property Name="pag_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Boleta" Relationship="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA" FromRole="Pago" ToRole="Boleta" />
           <NavigationProperty Name="Carro_Compra" Relationship="db_chocolateriaModel.FK_CARRO_CO_CARRO_PAG_PAGO" FromRole="Pago" ToRole="Carro_Compra" />
@@ -521,7 +521,7 @@
           <Key>
             <PropertyRef Name="ped_id" />
           </Key>
-          <Property Name="ped_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ped_id" Type="Int32" Nullable="false" />
           <Property Name="est_id" Type="Int32" Nullable="false" />
           <Property Name="tar_id" Type="Int32" />
           <Property Name="ped_activo" Type="Boolean" />
@@ -556,7 +556,7 @@
           <Key>
             <PropertyRef Name="pro_Id" />
           </Key>
-          <Property Name="pro_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pro_Id" Type="Int32" Nullable="false" />
           <Property Name="cat_id" Type="Int32" Nullable="false" />
           <Property Name="pro_Nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <Property Name="pro_Precio" Type="Int32" />
@@ -569,17 +569,18 @@
           <Key>
             <PropertyRef Name="sto_id" />
           </Key>
-          <Property Name="sto_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sto_id" Type="Int32" Nullable="false" />
           <Property Name="pro_Id" Type="Int32" />
           <Property Name="sto_fechaRegistro" Type="DateTime" />
           <Property Name="sto_fechaVencimiento" Type="DateTime" />
+          <Property Name="sto_cantidad" Type="Int32" />
           <NavigationProperty Name="Producto" Relationship="db_chocolateriaModel.FK_STOCK_PR_PRODUCTO__PRODUCTO" FromRole="Stock_producto" ToRole="Producto" />
         </EntityType>
         <EntityType Name="Tarjeta">
           <Key>
             <PropertyRef Name="tar_id" />
           </Key>
-          <Property Name="tar_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tar_id" Type="Int32" Nullable="false" />
           <Property Name="tipota_id" Type="Int32" Nullable="false" />
           <Property Name="tar_texto" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Pedido" Relationship="db_chocolateriaModel.FK_PEDIDO_ASSOCIATI_TARJETA" FromRole="Tarjeta" ToRole="Pedido" />
@@ -614,12 +615,11 @@
             <PropertyRef Name="usu_nombre" />
           </Key>
           <Property Name="usu_nombre" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
-          <Property Name="pri_id" Type="Int32" />
           <Property Name="per_rut" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="pri_id" Type="Int32" />
           <Property Name="usu_contrasena" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <Property Name="usu_correo" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <Property Name="usu_activo" Type="Boolean" />
-          <Property Name="usu_log" Type="Boolean" />
           <NavigationProperty Name="Carro_Compra" Relationship="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO" FromRole="Usuario" ToRole="Carro_Compra" />
           <NavigationProperty Name="Persona" Relationship="db_chocolateriaModel.FK_USUARIO_PERSONA_U_PERSONA" FromRole="Usuario" ToRole="Persona" />
           <NavigationProperty Name="Privilegios" Relationship="db_chocolateriaModel.FK_USUARIO_ASSOCIATI_PRIVILEG" FromRole="Usuario" ToRole="Privilegios" />
@@ -797,7 +797,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_chocolateriaModelStoreContainer" CdmEntityContainer="db_chocolateriaEntities15">
+        <EntityContainerMapping StorageEntityContainer="db_chocolateriaModelStoreContainer" CdmEntityContainer="db_chocolateriaEntitiesy">
           <EntitySetMapping Name="Boleta">
             <EntityTypeMapping TypeName="db_chocolateriaModel.Boleta">
               <MappingFragment StoreEntitySet="Boleta">
@@ -811,9 +811,9 @@
             <EntityTypeMapping TypeName="db_chocolateriaModel.Carro_Compra">
               <MappingFragment StoreEntitySet="Carro_Compra">
                 <ScalarProperty Name="car_id" ColumnName="car_id" />
+                <ScalarProperty Name="pag_id" ColumnName="pag_id" />
                 <ScalarProperty Name="ped_id" ColumnName="ped_id" />
                 <ScalarProperty Name="usu_nombre" ColumnName="usu_nombre" />
-                <ScalarProperty Name="pag_id" ColumnName="pag_id" />
                 <ScalarProperty Name="car_fecha" ColumnName="car_fecha" />
                 <ScalarProperty Name="car_total" ColumnName="car_total" />
               </MappingFragment>
@@ -842,8 +842,8 @@
             <EntityTypeMapping TypeName="db_chocolateriaModel.Pago">
               <MappingFragment StoreEntitySet="Pago">
                 <ScalarProperty Name="pag_id" ColumnName="pag_id" />
-                <ScalarProperty Name="tip_id" ColumnName="tip_id" />
                 <ScalarProperty Name="bol_Id" ColumnName="bol_Id" />
+                <ScalarProperty Name="tip_id" ColumnName="tip_id" />
                 <ScalarProperty Name="pag_nombre" ColumnName="pag_nombre" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -899,6 +899,7 @@
                 <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
                 <ScalarProperty Name="sto_fechaRegistro" ColumnName="sto_fechaRegistro" />
                 <ScalarProperty Name="sto_fechaVencimiento" ColumnName="sto_fechaVencimiento" />
+                <ScalarProperty Name="sto_cantidad" ColumnName="sto_cantidad" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -939,12 +940,11 @@
             <EntityTypeMapping TypeName="db_chocolateriaModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
                 <ScalarProperty Name="usu_nombre" ColumnName="usu_nombre" />
-                <ScalarProperty Name="pri_id" ColumnName="pri_id" />
                 <ScalarProperty Name="per_rut" ColumnName="per_rut" />
+                <ScalarProperty Name="pri_id" ColumnName="pri_id" />
                 <ScalarProperty Name="usu_contrasena" ColumnName="usu_contrasena" />
                 <ScalarProperty Name="usu_correo" ColumnName="usu_correo" />
                 <ScalarProperty Name="usu_activo" ColumnName="usu_activo" />
-                <ScalarProperty Name="usu_log" ColumnName="usu_log" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -968,7 +968,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="Modelo">
+      <Diagram Name="Modeliwi">
         <EntityTypeShape EntityType="db_chocolateriaModel.Boleta" Width="1.5" PointX="3" PointY="8.5" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Carro_Compra" Width="1.5" PointX="7.5" PointY="1" Height="2.9417936197916665" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Categoria" Width="1.5" PointX="5.25" PointY="5.625" Height="1.5956835937499996" IsExpanded="true" />
@@ -978,19 +978,19 @@
         <EntityTypeShape EntityType="db_chocolateriaModel.Persona" Width="1.5" PointX="3" PointY="13.5" Height="2.5571907552083317" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Privilegios" Width="1.5" PointX="3" PointY="16.75" Height="1.595683593749996" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Producto" Width="1.5" PointX="7.5" PointY="5.125" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_chocolateriaModel.Stock_producto" Width="1.5" PointX="9.75" PointY="5.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Stock_producto" Width="1.5" PointX="9.75" PointY="5.375" Height="2.1725878906249996" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Tarjeta" Width="1.5" PointX="3" PointY="1.5" Height="1.9802864583333353" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Tipo_estado" Width="1.5" PointX="3" PointY="5.625" Height="1.5956835937500031" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Tipo_Pago" Width="1.5" PointX="3" PointY="11.125" Height="1.5956835937500031" IsExpanded="true" />
         <EntityTypeShape EntityType="db_chocolateriaModel.Tipo_tarjeta" Width="1.5" PointX="0.75" PointY="1.625" Height="1.5956835937500031" IsExpanded="true" />
-        <EntityTypeShape EntityType="db_chocolateriaModel.Usuario" Width="1.5" PointX="5.25" PointY="14.375" Height="2.9417936197916692" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Usuario" Width="1.5" PointX="5.25" PointY="14.5" Height="2.7494921875000014" IsExpanded="true" />
         <AssociationConnector Association="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="9.8939925130208337" />
           <ConnectorPoint PointX="5.25" PointY="9.8939925130208337" />
         </AssociationConnector>
         <AssociationConnector Association="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO" ManuallyRouted="false">
-          <ConnectorPoint PointX="6.75" PointY="14.376152846153847" />
-          <ConnectorPoint PointX="7.125" PointY="14.001152846153847" />
+          <ConnectorPoint PointX="6.75" PointY="14.501152846153847" />
+          <ConnectorPoint PointX="7.125" PointY="14.126152846153847" />
           <ConnectorPoint PointX="7.125" PointY="2.4708968098958328" />
           <ConnectorPoint PointX="7.5" PointY="2.4708968098958328" />
         </AssociationConnector>
@@ -1039,16 +1039,16 @@
           <ConnectorPoint PointX="5.25" PointY="3.2135697083333343" />
         </AssociationConnector>
         <AssociationConnector Association="db_chocolateriaModel.FK_USUARIO_PERSONA_U_PERSONA" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="15.216095377604166" />
-          <ConnectorPoint PointX="5.25" PointY="15.216095377604166" />
+          <ConnectorPoint PointX="4.5" PointY="15.278595377604166" />
+          <ConnectorPoint PointX="5.25" PointY="15.278595377604166" />
         </AssociationConnector>
         <AssociationConnector Association="db_chocolateriaModel.FK_USUARIO_ASSOCIATI_PRIVILEG" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="17.033396809895834" />
-          <ConnectorPoint PointX="5.25" PointY="17.033396809895834" />
+          <ConnectorPoint PointX="4.5" PointY="16.99974609375" />
+          <ConnectorPoint PointX="5.25" PointY="16.99974609375" />
         </AssociationConnector>
         <AssociationConnector Association="db_chocolateriaModel.FK_STOCK_PR_PRODUCTO__PRODUCTO" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="6.4901432291666659" />
-          <ConnectorPoint PointX="9.75" PointY="6.4901432291666659" />
+          <ConnectorPoint PointX="9" PointY="6.4612939453125" />
+          <ConnectorPoint PointX="9.75" PointY="6.4612939453125" />
         </AssociationConnector>
         <AssociationConnector Association="db_chocolateriaModel.FK_TARJETA_TIPO_TARJ_TIPO_TAR" ManuallyRouted="false">
           <ConnectorPoint PointX="2.25" PointY="2.4228417968750016" />
