@@ -1,0 +1,102 @@
+﻿body
+{
+}
+.principal a
+{
+    text-decoration: none;
+    padding: 5px;
+    font-family: Verdana;
+    font-size: 20px;
+    display: inline-block;
+    margin: 6px 5px 0px 5px;
+    background-color: White;
+    text-decoration:none;
+}
+
+
+.principal a:hover
+{
+    background-color: #ccc;
+}
+
+#contenido
+{
+    width:1270px;
+    height:500px;
+    margin: auto;
+    background-color:#ccc;
+    padding:25px;
+}
+#menu .principal
+{
+    clear: both;
+    width: 88%;
+    background-color: #221100;
+    height: 60px;
+    margin: auto;
+    padding: 5px;
+    text-decoration:none;
+}
+#menu .principal > li
+{
+    float: left;
+    
+}
+#menu .principal li a
+{
+    color: #FFF8DC;
+    text-decoration: none;
+    padding: 10px;
+    font-family: Verdana;
+    font-weight: 600;
+    font-size: 28px;
+    display: block;
+    margin: 3px;
+    background-color: #221100;
+}
+#menu .principal li a:hover
+{
+    background-color: #434343;
+}
+
+#menu .principal li ul
+{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    
+}
+
+#menu .principal li:hover > ul
+{
+    display: block;
+    
+}
+.titumenuprin a
+{
+    color: #FFF8DC;
+    text-decoration: none;
+    padding: 10px 12px;
+    font-family: Verdana;
+    font-weight: 600;
+    font-size: 28px;
+    display: block;
+    background-color: #221100;
+}
+
+.submenu a
+{
+    font-size:medium;
+    color: #FFF8DC;
+    text-decoration: none;
+    padding: 10px 12px;
+    font-family: Verdana;
+    font-weight: bold;
+    display: block;
+    background-color: #221100;
+}
+#logo
+{
+    float: left; 
+    margin: 3px;
+}

@@ -1,0 +1,399 @@
+﻿body
+{
+    margin: 10px;
+    background-color: white;
+    
+}
+   
+.foto
+{
+    float:left;
+    height: 197px; 
+    width: 238px;
+    }
+
+#cosa
+{
+    float:left;
+    height: 391px;
+    width: 236px;
+}
+
+#cosa li
+{
+    list-style-type:circle;
+    }
+    
+    #cosa li a
+{
+    color:#DEB887;
+    }
+
+#cuenta
+{
+    float: left;
+    width: 406px;
+    height: 309px;
+}
+  
+#cuenta td
+{
+    font-weight:bolder;
+    }
+    
+#sesion
+{
+    font-family: Vrinda;
+    font-size: 20px;
+    text-align: center;
+}
+
+#footer
+{
+    font-size: 30px;
+    font-family: Vrinda;
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.submenu a
+{
+    font-size:larger;
+    color: #FFF8DC;
+    text-decoration: none;
+    padding: 10px 12px;
+    font-family: Vrinda;
+    font-weight: bolder;
+    display: block;
+    background-color: #221100;
+}
+
+.cuentasup
+{
+    font-size: 30px;
+    font-family: Vrinda;
+}
+
+
+#principal
+{
+    margin: 10px;
+    background-color: transparent;
+}
+
+.productos
+{
+    float: left;
+    width: 190px;
+    height: 300px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 16px 15px 10px 5px;
+}
+
+#contenido
+{
+    padding-top: 30px;
+    margin: 0px 60px 0px 60px;
+    height: 628px;
+    background-color: White;
+}
+
+#contenido h1
+{
+    font-family: Vrinda;
+    font-size: 30px;
+    font-style: normal;
+}
+
+#logo
+{
+    float: left; 
+    margin: 3px;
+}
+ul, ol
+{
+    list-style: none;
+}
+#menu .principal
+{
+    clear: both;
+    width: 80%;
+    background-color: #221100;
+    height: 60px;
+    margin: auto;
+    padding: 5px;
+}
+#menu .principal > li
+{
+    float: left;
+}
+.titumenuprin
+{
+    color: #FFF8DC;
+    text-decoration: none;
+    padding: 10px 23px;
+    font-family: Vrinda;
+    font-weight: 600;
+    font-size: 30px;
+    display: block;
+    background-color: #221100;
+}
+#menu .principal li a:hover
+{
+    background-color: #434343;
+}
+#menu .principal li a:hover
+{
+    background-color: #434343;
+}
+
+#menu .principal li ul
+{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+#menu .principal li:hover > ul
+{
+    display: block;
+}
+
+#menu2 .usuario
+{
+    margin-right: 5px;
+    width: 862px;
+    float: right;
+    font-size: 15px;
+    padding-right: 10px;
+    margin-right: 10px;
+    background-color: White;
+}
+
+#menu2 .usuario a
+{
+    float: right;
+    display: block;
+    padding: 0px 5px 0px 5px;
+    color: #434343;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#menu2 .usuario a:hover
+{
+    color: #939393;
+}
+
+
+
+#header .menu
+{
+    margin-right: 5px;
+    width: 862px;
+    float: right;
+    font-size: 15px;
+    padding-right: 10px;
+    margin-right: 10px;
+    background-color: #2A1500;
+}
+#header .menu a
+{
+    float: right;
+    display: block;
+    padding: 0px 5px 0px 5px;
+    color: #94d5d1;
+    text-decoration: none;
+    font-size: 12px;
+}
+#header .menu a:hover
+{
+    color: #fff;
+}
+#header .menu a + a
+{
+    border-right: 1px solid #CCC;
+}
+
+#cuerpo
+{
+    width: 80%;
+    clear: both;
+    min-height: 300px;
+    margin: 15px;
+}
+
+#pie
+{
+    text-align: center;
+    float: left;
+}
+
+.button
+{
+    background-color: #221100;
+    text-decoration: none;
+    color: White;
+    height: 50px;
+    width: 100px;
+    text-decoration: none;
+}
+.a
+{
+    text-decoration: none;
+}
+
+.cuenta
+{
+    font-family: Vrinda;
+    font-size: 15px;
+    text-align: left;
+    margin-left: 260px;
+}
+
+.pedidos
+{
+    font-family: Vrinda;
+    font-size: 25px;
+}
+
+#info
+{
+    height: 200px;
+    width: 200px;
+    float: left;
+    border-right: 1px solid #CCC;
+}
+
+#info h2
+{
+    font-family: Vrinda;
+    font-size: 17px;
+    float: left;
+}
+
+#info h1
+{
+    font-family: Vrinda;
+    font-size: 10px;
+}
+
+#info2
+{
+    width: 800px;
+    float: left;
+    margin: 0px 20px 0px 20px;
+}
+
+#info2 h1
+{
+    font-family: Vrinda;
+    font-size: 20px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+#footer
+{
+    margin: 0px 60px 0px 60px;
+    font-size: 15px;
+    background-color: #EBEBE0;
+    height: 200px;
+    width: 80%;
+    float: left;
+}
+
+.TituloC
+{
+    font-size: large;
+    color: #BC8F8F;
+    font-weight: 900;
+}
+
+
+.numero
+{
+    color: #BC8F8F;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+#Contactop
+{
+    text-align: justify;
+    float: left;
+    margin-left: 200px;
+    margin-top: 29px;
+}
+
+#info2 ul
+{
+    list-style-type: square;
+}
+
+#info2 ul a
+{
+    text-decoration: none;
+    color: Black;
+}
+
+#imagenmenu
+{
+    padding: 5px;
+    background: rgba(fff,fff,fff,.7);
+    width: 273px;
+    float: left;
+}
+
+#textomenu
+{
+    float: left;
+    text-align:center;
+    height: 211px;
+    width: 745px;
+}
+    
+#textocarro
+{
+    float:left;
+    font-weight: 600;
+    width: 605px;
+}
+    
+#imagencarro
+{
+    float:left;
+    height: 172px;
+    width: 223px;
+}
+    
+    .tituped
+    {
+        color:Navy;
+    }
+    
+ #tabla {     font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse; }
+
+#tabla th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
+
+#tabla td {    padding: 8px;     background: #e8edff;     border-bottom: 1px solid #fff;
+    color: #669;    border-top: 1px solid transparent; }
+
+#tabla tr:hover td { background: #d0dafd; color: #339; }
+
+
+ #tablap {     font-family: "Bodoni MT", "Lucida Grande", Sans-Serif;
+    font-size: 12px;    margin: 45px;     width: 480px; text-align: left;    border-collapse: collapse; }
+
+#tablap th {     font-size: 13px;     font-weight: normal;     padding: 8px;     background: #b9c9fe;
+    border-top: 4px solid #aabcfe;    border-bottom: 1px solid #fff; color: #039; }
+
+#tablap td {    padding: 8px;     background: #e8edff;     border-bottom: 1px solid #fff;
+    color: #669;    border-top: 1px solid transparent; }
+
+#tablap tr:hover td { background: #d0dafd; color: #339; }

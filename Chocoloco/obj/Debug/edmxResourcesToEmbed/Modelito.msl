@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_chocolateriaModelStoreContainer" CdmEntityContainer="db_chocolateriaEntities5000">
+    <EntitySetMapping Name="Boleta">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Boleta">
+        <MappingFragment StoreEntitySet="Boleta">
+          <ScalarProperty Name="bol_Id" ColumnName="bol_Id" />
+          <ScalarProperty Name="bol_Detalle" ColumnName="bol_Detalle" />
+          <ScalarProperty Name="bol_Nombre_Chocolateria" ColumnName="bol_Nombre_Chocolateria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carro_Compra">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Carro_Compra">
+        <MappingFragment StoreEntitySet="Carro_Compra">
+          <ScalarProperty Name="car_id" ColumnName="car_id" />
+          <ScalarProperty Name="ped_id" ColumnName="ped_id" />
+          <ScalarProperty Name="usu_nombre" ColumnName="usu_nombre" />
+          <ScalarProperty Name="pag_id" ColumnName="pag_id" />
+          <ScalarProperty Name="car_fecha" ColumnName="car_fecha" />
+          <ScalarProperty Name="car_total" ColumnName="car_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="cat_nombre" ColumnName="cat_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Detalle_Producto">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Detalle_Producto">
+        <MappingFragment StoreEntitySet="Detalle_Producto">
+          <ScalarProperty Name="car_id" ColumnName="car_id" />
+          <ScalarProperty Name="det_Id" ColumnName="det_Id" />
+          <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
+          <ScalarProperty Name="det_cantidad" ColumnName="det_cantidad" />
+          <ScalarProperty Name="det_valor_unitario" ColumnName="det_valor_unitario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pago">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Pago">
+        <MappingFragment StoreEntitySet="Pago">
+          <ScalarProperty Name="pag_id" ColumnName="pag_id" />
+          <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+          <ScalarProperty Name="bol_Id" ColumnName="bol_Id" />
+          <ScalarProperty Name="pag_nombre" ColumnName="pag_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pedido">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Pedido">
+        <MappingFragment StoreEntitySet="Pedido">
+          <ScalarProperty Name="ped_id" ColumnName="ped_id" />
+          <ScalarProperty Name="est_id" ColumnName="est_id" />
+          <ScalarProperty Name="tar_id" ColumnName="tar_id" />
+          <ScalarProperty Name="ped_activo" ColumnName="ped_activo" />
+          <ScalarProperty Name="ped_fechaEnvio" ColumnName="ped_fechaEnvio" />
+          <ScalarProperty Name="ped_direccionEnvio" ColumnName="ped_direccionEnvio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persona">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Persona">
+        <MappingFragment StoreEntitySet="Persona">
+          <ScalarProperty Name="per_rut" ColumnName="per_rut" />
+          <ScalarProperty Name="per_nombre" ColumnName="per_nombre" />
+          <ScalarProperty Name="per_apellidoP" ColumnName="per_apellidoP" />
+          <ScalarProperty Name="per_apellidoM" ColumnName="per_apellidoM" />
+          <ScalarProperty Name="per_direccion" ColumnName="per_direccion" />
+          <ScalarProperty Name="per_telefono" ColumnName="per_telefono" />
+          <ScalarProperty Name="per_fechaNac" ColumnName="per_fechaNac" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Privilegios">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Privilegios">
+        <MappingFragment StoreEntitySet="Privilegios">
+          <ScalarProperty Name="pri_id" ColumnName="pri_id" />
+          <ScalarProperty Name="pri_descripcion" ColumnName="pri_descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
+          <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+          <ScalarProperty Name="pro_Nombre" ColumnName="pro_Nombre" />
+          <ScalarProperty Name="pro_Precio" ColumnName="pro_Precio" />
+          <ScalarProperty Name="pro_Imagen" ColumnName="pro_Imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stock_producto">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Stock_producto">
+        <MappingFragment StoreEntitySet="Stock_producto">
+          <ScalarProperty Name="sto_id" ColumnName="sto_id" />
+          <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
+          <ScalarProperty Name="sto_fechaRegistro" ColumnName="sto_fechaRegistro" />
+          <ScalarProperty Name="sto_fechaVencimiento" ColumnName="sto_fechaVencimiento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarjeta">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Tarjeta">
+        <MappingFragment StoreEntitySet="Tarjeta">
+          <ScalarProperty Name="tar_id" ColumnName="tar_id" />
+          <ScalarProperty Name="tipota_id" ColumnName="tipota_id" />
+          <ScalarProperty Name="tar_texto" ColumnName="tar_texto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_estado">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Tipo_estado">
+        <MappingFragment StoreEntitySet="Tipo_estado">
+          <ScalarProperty Name="est_id" ColumnName="est_id" />
+          <ScalarProperty Name="est_nombre" ColumnName="est_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Pago">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Tipo_Pago">
+        <MappingFragment StoreEntitySet="Tipo_Pago">
+          <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+          <ScalarProperty Name="tip_nombre" ColumnName="tip_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_tarjeta">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Tipo_tarjeta">
+        <MappingFragment StoreEntitySet="Tipo_tarjeta">
+          <ScalarProperty Name="tipota_id" ColumnName="tipota_id" />
+          <ScalarProperty Name="tipota_nombre" ColumnName="tipota_nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="db_chocolateriaModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="usu_nombre" ColumnName="usu_nombre" />
+          <ScalarProperty Name="pri_id" ColumnName="pri_id" />
+          <ScalarProperty Name="per_rut" ColumnName="per_rut" />
+          <ScalarProperty Name="usu_contrasena" ColumnName="usu_contrasena" />
+          <ScalarProperty Name="usu_correo" ColumnName="usu_correo" />
+          <ScalarProperty Name="usu_activo" ColumnName="usu_activo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

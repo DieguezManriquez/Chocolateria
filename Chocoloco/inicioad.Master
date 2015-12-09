@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="inicioad.master.cs" Inherits="Chocoloco.inicioad" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/EstiloAdmin.css" type="text/css" rel="Stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+   <form id="form1" runat="server">
+    <div> 
+    <div id="logo">
+    <a href="InicioAD.aspx">
+    <img src="imagenes/logo.png" alt="logo" />
+    </a>
+    </div>
+        <div id="menu">
+            <ul class="principal">
+                <li><a class="titumenuprin">Productos</a>
+                    <ul class="submenu">
+                        <li><a href="RegistroPro.aspx">Registrar Producto</a></li>
+                        <li><a href="EditarPro.aspx">Editar Producto</a> </li>
+                        <li><a href="ListarPro.aspx">Listar Productos</a></li>
+                    </ul>
+                </li>
+                <li><a class="titumenuprin">Clientes</a>
+                    <ul class="submenu">
+                        <li><a href="EstadoPedidos.aspx">Pedidos</a></li>
+                    </ul>
+                </li>
+                <li><a class="titumenuprin">Ventas</a>
+                <ul class="submenu">
+                <li><a href="ProductoEsta.aspx">Estadistica Producto</a></li>
+                <li><a href="Ganancias.aspx">Ganancias</a></li>
+                </ul>
+                
+                </li>
+            </ul>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db_chocolateriaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="db_chocolateriaModelStoreContainer">
+          <EntitySet Name="Boleta" EntityType="db_chocolateriaModel.Store.Boleta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Carro_Compra" EntityType="db_chocolateriaModel.Store.Carro_Compra" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Categoria" EntityType="db_chocolateriaModel.Store.Categoria" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Detalle_Producto" EntityType="db_chocolateriaModel.Store.Detalle_Producto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pago" EntityType="db_chocolateriaModel.Store.Pago" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Pedido" EntityType="db_chocolateriaModel.Store.Pedido" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Persona" EntityType="db_chocolateriaModel.Store.Persona" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Privilegios" EntityType="db_chocolateriaModel.Store.Privilegios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Producto" EntityType="db_chocolateriaModel.Store.Producto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Stock_producto" EntityType="db_chocolateriaModel.Store.Stock_producto" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tarjeta" EntityType="db_chocolateriaModel.Store.Tarjeta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo_estado" EntityType="db_chocolateriaModel.Store.Tipo_estado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo_Pago" EntityType="db_chocolateriaModel.Store.Tipo_Pago" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tipo_tarjeta" EntityType="db_chocolateriaModel.Store.Tipo_tarjeta" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Usuario" EntityType="db_chocolateriaModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CARRO_CO_ASSOCIATI_USUARIO" Association="db_chocolateriaModel.Store.FK_CARRO_CO_ASSOCIATI_USUARIO">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARRO_CO_CARRO_PAG_PAGO" Association="db_chocolateriaModel.Store.FK_CARRO_CO_CARRO_PAG_PAGO">
+            <End Role="Pago" EntitySet="Pago" />
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARRO_CO_CARRO_PED_PEDIDO" Association="db_chocolateriaModel.Store.FK_CARRO_CO_CARRO_PED_PEDIDO">
+            <End Role="Pedido" EntitySet="Pedido" />
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__CARRO_DET_CARRO_CO" Association="db_chocolateriaModel.Store.FK_DETALLE__CARRO_DET_CARRO_CO">
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+            <End Role="Detalle_Producto" EntitySet="Detalle_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__PRODUCTO__PRODUCTO" Association="db_chocolateriaModel.Store.FK_DETALLE__PRODUCTO__PRODUCTO">
+            <End Role="Producto" EntitySet="Producto" />
+            <End Role="Detalle_Producto" EntitySet="Detalle_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PAGO_PAGO_BOLE_BOLETA" Association="db_chocolateriaModel.Store.FK_PAGO_PAGO_BOLE_BOLETA">
+            <End Role="Boleta" EntitySet="Boleta" />
+            <End Role="Pago" EntitySet="Pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PAGO_TIPOPAGO__TIPO_PAG" Association="db_chocolateriaModel.Store.FK_PAGO_TIPOPAGO__TIPO_PAG">
+            <End Role="Tipo_Pago" EntitySet="Tipo_Pago" />
+            <End Role="Pago" EntitySet="Pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PEDIDO_ASSOCIATI_TARJETA" Association="db_chocolateriaModel.Store.FK_PEDIDO_ASSOCIATI_TARJETA">
+            <End Role="Tarjeta" EntitySet="Tarjeta" />
+            <End Role="Pedido" EntitySet="Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PEDIDO_ESTADO_PE_TIPO_EST" Association="db_chocolateriaModel.Store.FK_PEDIDO_ESTADO_PE_TIPO_EST">
+            <End Role="Tipo_estado" EntitySet="Tipo_estado" />
+            <End Role="Pedido" EntitySet="Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCTO_CATEGORIA_CATEGORI" Association="db_chocolateriaModel.Store.FK_PRODUCTO_CATEGORIA_CATEGORI">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Producto" EntitySet="Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STOCK_PR_PRODUCTO__PRODUCTO" Association="db_chocolateriaModel.Store.FK_STOCK_PR_PRODUCTO__PRODUCTO">
+            <End Role="Producto" EntitySet="Producto" />
+            <End Role="Stock_producto" EntitySet="Stock_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TARJETA_TIPO_TARJ_TIPO_TAR" Association="db_chocolateriaModel.Store.FK_TARJETA_TIPO_TARJ_TIPO_TAR">
+            <End Role="Tipo_tarjeta" EntitySet="Tipo_tarjeta" />
+            <End Role="Tarjeta" EntitySet="Tarjeta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO_ASSOCIATI_PRIVILEG" Association="db_chocolateriaModel.Store.FK_USUARIO_ASSOCIATI_PRIVILEG">
+            <End Role="Privilegios" EntitySet="Privilegios" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO_PERSONA_U_PERSONA" Association="db_chocolateriaModel.Store.FK_USUARIO_PERSONA_U_PERSONA">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Boleta">
+          <Key>
+            <PropertyRef Name="bol_Id" />
+          </Key>
+          <Property Name="bol_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="bol_Detalle" Type="int" />
+          <Property Name="bol_Nombre_Chocolateria" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Carro_Compra">
+          <Key>
+            <PropertyRef Name="car_id" />
+          </Key>
+          <Property Name="car_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ped_id" Type="int" />
+          <Property Name="usu_nombre" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="pag_id" Type="int" />
+          <Property Name="car_fecha" Type="date" />
+          <Property Name="car_total" Type="int" />
+        </EntityType>
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cat_nombre" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Detalle_Producto">
+          <Key>
+            <PropertyRef Name="car_id" />
+            <PropertyRef Name="det_Id" />
+          </Key>
+          <Property Name="car_id" Type="int" Nullable="false" />
+          <Property Name="det_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pro_Id" Type="int" Nullable="false" />
+          <Property Name="det_cantidad" Type="int" />
+          <Property Name="det_valor_unitario" Type="int" />
+        </EntityType>
+        <EntityType Name="Pago">
+          <Key>
+            <PropertyRef Name="pag_id" />
+          </Key>
+          <Property Name="pag_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tip_id" Type="int" Nullable="false" />
+          <Property Name="bol_Id" Type="int" Nullable="false" />
+          <Property Name="pag_nombre" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Pedido">
+          <Key>
+            <PropertyRef Name="ped_id" />
+          </Key>
+          <Property Name="ped_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="est_id" Type="int" Nullable="false" />
+          <Property Name="tar_id" Type="int" />
+          <Property Name="ped_activo" Type="bit" />
+          <Property Name="ped_fechaEnvio" Type="date" />
+          <Property Name="ped_direccionEnvio" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="per_rut" />
+          </Key>
+          <Property Name="per_rut" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="per_nombre" Type="varchar" MaxLength="254" />
+          <Property Name="per_apellidoP" Type="varchar" MaxLength="254" />
+          <Property Name="per_apellidoM" Type="varchar" MaxLength="254" />
+          <Property Name="per_direccion" Type="varchar" MaxLength="254" />
+          <Property Name="per_telefono" Type="int" />
+          <Property Name="per_fechaNac" Type="date" />
+        </EntityType>
+        <EntityType Name="Privilegios">
+          <Key>
+            <PropertyRef Name="pri_id" />
+          </Key>
+          <Property Name="pri_id" Type="int" Nullable="false" />
+          <Property Name="pri_descripcion" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="pro_Id" />
+          </Key>
+          <Property Name="pro_Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cat_id" Type="int" Nullable="false" />
+          <Property Name="pro_Nombre" Type="varchar" MaxLength="254" />
+          <Property Name="pro_Precio" Type="int" />
+          <Property Name="pro_Imagen" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Stock_producto">
+          <Key>
+            <PropertyRef Name="sto_id" />
+          </Key>
+          <Property Name="sto_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="pro_Id" Type="int" />
+          <Property Name="sto_fechaRegistro" Type="date" />
+          <Property Name="sto_fechaVencimiento" Type="date" />
+        </EntityType>
+        <EntityType Name="Tarjeta">
+          <Key>
+            <PropertyRef Name="tar_id" />
+          </Key>
+          <Property Name="tar_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tipota_id" Type="int" Nullable="false" />
+          <Property Name="tar_texto" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Tipo_estado">
+          <Key>
+            <PropertyRef Name="est_id" />
+          </Key>
+          <Property Name="est_id" Type="int" Nullable="false" />
+          <Property Name="est_nombre" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Tipo_Pago">
+          <Key>
+            <PropertyRef Name="tip_id" />
+          </Key>
+          <Property Name="tip_id" Type="int" Nullable="false" />
+          <Property Name="tip_nombre" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Tipo_tarjeta">
+          <Key>
+            <PropertyRef Name="tipota_id" />
+          </Key>
+          <Property Name="tipota_id" Type="int" Nullable="false" />
+          <Property Name="tipota_nombre" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="usu_nombre" />
+          </Key>
+          <Property Name="usu_nombre" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="pri_id" Type="int" />
+          <Property Name="per_rut" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="usu_contrasena" Type="varchar" MaxLength="254" />
+          <Property Name="usu_correo" Type="varchar" MaxLength="254" />
+          <Property Name="usu_activo" Type="bit" />
+          <Property Name="usu_log" Type="bit" />
+        </EntityType>
+        <Association Name="FK_CARRO_CO_ASSOCIATI_USUARIO">
+          <End Role="Usuario" Type="db_chocolateriaModel.Store.Usuario" Multiplicity="1" />
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Store.Carro_Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="usu_nombre" />
+            </Principal>
+            <Dependent Role="Carro_Compra">
+              <PropertyRef Name="usu_nombre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARRO_CO_CARRO_PAG_PAGO">
+          <End Role="Pago" Type="db_chocolateriaModel.Store.Pago" Multiplicity="0..1" />
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Store.Carro_Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pago">
+              <PropertyRef Name="pag_id" />
+            </Principal>
+            <Dependent Role="Carro_Compra">
+              <PropertyRef Name="pag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARRO_CO_CARRO_PED_PEDIDO">
+          <End Role="Pedido" Type="db_chocolateriaModel.Store.Pedido" Multiplicity="0..1" />
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Store.Carro_Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedido">
+              <PropertyRef Name="ped_id" />
+            </Principal>
+            <Dependent Role="Carro_Compra">
+              <PropertyRef Name="ped_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__CARRO_DET_CARRO_CO">
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Store.Carro_Compra" Multiplicity="1" />
+          <End Role="Detalle_Producto" Type="db_chocolateriaModel.Store.Detalle_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Carro_Compra">
+              <PropertyRef Name="car_id" />
+            </Principal>
+            <Dependent Role="Detalle_Producto">
+              <PropertyRef Name="car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__PRODUCTO__PRODUCTO">
+          <End Role="Producto" Type="db_chocolateriaModel.Store.Producto" Multiplicity="1" />
+          <End Role="Detalle_Producto" Type="db_chocolateriaModel.Store.Detalle_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producto">
+              <PropertyRef Name="pro_Id" />
+            </Principal>
+            <Dependent Role="Detalle_Producto">
+              <PropertyRef Name="pro_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PAGO_PAGO_BOLE_BOLETA">
+          <End Role="Boleta" Type="db_chocolateriaModel.Store.Boleta" Multiplicity="1" />
+          <End Role="Pago" Type="db_chocolateriaModel.Store.Pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Boleta">
+              <PropertyRef Name="bol_Id" />
+            </Principal>
+            <Dependent Role="Pago">
+              <PropertyRef Name="bol_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PAGO_TIPOPAGO__TIPO_PAG">
+          <End Role="Tipo_Pago" Type="db_chocolateriaModel.Store.Tipo_Pago" Multiplicity="1" />
+          <End Role="Pago" Type="db_chocolateriaModel.Store.Pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Pago">
+              <PropertyRef Name="tip_id" />
+            </Principal>
+            <Dependent Role="Pago">
+              <PropertyRef Name="tip_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PEDIDO_ASSOCIATI_TARJETA">
+          <End Role="Tarjeta" Type="db_chocolateriaModel.Store.Tarjeta" Multiplicity="0..1" />
+          <End Role="Pedido" Type="db_chocolateriaModel.Store.Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tarjeta">
+              <PropertyRef Name="tar_id" />
+            </Principal>
+            <Dependent Role="Pedido">
+              <PropertyRef Name="tar_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PEDIDO_ESTADO_PE_TIPO_EST">
+          <End Role="Tipo_estado" Type="db_chocolateriaModel.Store.Tipo_estado" Multiplicity="1" />
+          <End Role="Pedido" Type="db_chocolateriaModel.Store.Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_estado">
+              <PropertyRef Name="est_id" />
+            </Principal>
+            <Dependent Role="Pedido">
+              <PropertyRef Name="est_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCTO_CATEGORIA_CATEGORI">
+          <End Role="Categoria" Type="db_chocolateriaModel.Store.Categoria" Multiplicity="1" />
+          <End Role="Producto" Type="db_chocolateriaModel.Store.Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="cat_id" />
+            </Principal>
+            <Dependent Role="Producto">
+              <PropertyRef Name="cat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STOCK_PR_PRODUCTO__PRODUCTO">
+          <End Role="Producto" Type="db_chocolateriaModel.Store.Producto" Multiplicity="0..1" />
+          <End Role="Stock_producto" Type="db_chocolateriaModel.Store.Stock_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producto">
+              <PropertyRef Name="pro_Id" />
+            </Principal>
+            <Dependent Role="Stock_producto">
+              <PropertyRef Name="pro_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TARJETA_TIPO_TARJ_TIPO_TAR">
+          <End Role="Tipo_tarjeta" Type="db_chocolateriaModel.Store.Tipo_tarjeta" Multiplicity="1" />
+          <End Role="Tarjeta" Type="db_chocolateriaModel.Store.Tarjeta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_tarjeta">
+              <PropertyRef Name="tipota_id" />
+            </Principal>
+            <Dependent Role="Tarjeta">
+              <PropertyRef Name="tipota_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO_ASSOCIATI_PRIVILEG">
+          <End Role="Privilegios" Type="db_chocolateriaModel.Store.Privilegios" Multiplicity="0..1" />
+          <End Role="Usuario" Type="db_chocolateriaModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Privilegios">
+              <PropertyRef Name="pri_id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="pri_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO_PERSONA_U_PERSONA">
+          <End Role="Persona" Type="db_chocolateriaModel.Store.Persona" Multiplicity="1" />
+          <End Role="Usuario" Type="db_chocolateriaModel.Store.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="per_rut" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="per_rut" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db_chocolateriaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="db_chocolateriaEntities14" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Boleta" EntityType="db_chocolateriaModel.Boleta" />
+          <EntitySet Name="Carro_Compra" EntityType="db_chocolateriaModel.Carro_Compra" />
+          <EntitySet Name="Categoria" EntityType="db_chocolateriaModel.Categoria" />
+          <EntitySet Name="Detalle_Producto" EntityType="db_chocolateriaModel.Detalle_Producto" />
+          <EntitySet Name="Pago" EntityType="db_chocolateriaModel.Pago" />
+          <EntitySet Name="Pedido" EntityType="db_chocolateriaModel.Pedido" />
+          <EntitySet Name="Persona" EntityType="db_chocolateriaModel.Persona" />
+          <EntitySet Name="Privilegios" EntityType="db_chocolateriaModel.Privilegios" />
+          <EntitySet Name="Producto" EntityType="db_chocolateriaModel.Producto" />
+          <EntitySet Name="Stock_producto" EntityType="db_chocolateriaModel.Stock_producto" />
+          <EntitySet Name="Tarjeta" EntityType="db_chocolateriaModel.Tarjeta" />
+          <EntitySet Name="Tipo_estado" EntityType="db_chocolateriaModel.Tipo_estado" />
+          <EntitySet Name="Tipo_Pago" EntityType="db_chocolateriaModel.Tipo_Pago" />
+          <EntitySet Name="Tipo_tarjeta" EntityType="db_chocolateriaModel.Tipo_tarjeta" />
+          <EntitySet Name="Usuario" EntityType="db_chocolateriaModel.Usuario" />
+          <AssociationSet Name="FK_PAGO_PAGO_BOLE_BOLETA" Association="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA">
+            <End Role="Boleta" EntitySet="Boleta" />
+            <End Role="Pago" EntitySet="Pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARRO_CO_ASSOCIATI_USUARIO" Association="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO">
+            <End Role="Usuario" EntitySet="Usuario" />
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARRO_CO_CARRO_PAG_PAGO" Association="db_chocolateriaModel.FK_CARRO_CO_CARRO_PAG_PAGO">
+            <End Role="Pago" EntitySet="Pago" />
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CARRO_CO_CARRO_PED_PEDIDO" Association="db_chocolateriaModel.FK_CARRO_CO_CARRO_PED_PEDIDO">
+            <End Role="Pedido" EntitySet="Pedido" />
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__CARRO_DET_CARRO_CO" Association="db_chocolateriaModel.FK_DETALLE__CARRO_DET_CARRO_CO">
+            <End Role="Carro_Compra" EntitySet="Carro_Compra" />
+            <End Role="Detalle_Producto" EntitySet="Detalle_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PRODUCTO_CATEGORIA_CATEGORI" Association="db_chocolateriaModel.FK_PRODUCTO_CATEGORIA_CATEGORI">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Producto" EntitySet="Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__PRODUCTO__PRODUCTO" Association="db_chocolateriaModel.FK_DETALLE__PRODUCTO__PRODUCTO">
+            <End Role="Producto" EntitySet="Producto" />
+            <End Role="Detalle_Producto" EntitySet="Detalle_Producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PAGO_TIPOPAGO__TIPO_PAG" Association="db_chocolateriaModel.FK_PAGO_TIPOPAGO__TIPO_PAG">
+            <End Role="Tipo_Pago" EntitySet="Tipo_Pago" />
+            <End Role="Pago" EntitySet="Pago" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PEDIDO_ASSOCIATI_TARJETA" Association="db_chocolateriaModel.FK_PEDIDO_ASSOCIATI_TARJETA">
+            <End Role="Tarjeta" EntitySet="Tarjeta" />
+            <End Role="Pedido" EntitySet="Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PEDIDO_ESTADO_PE_TIPO_EST" Association="db_chocolateriaModel.FK_PEDIDO_ESTADO_PE_TIPO_EST">
+            <End Role="Tipo_estado" EntitySet="Tipo_estado" />
+            <End Role="Pedido" EntitySet="Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO_PERSONA_U_PERSONA" Association="db_chocolateriaModel.FK_USUARIO_PERSONA_U_PERSONA">
+            <End Role="Persona" EntitySet="Persona" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIO_ASSOCIATI_PRIVILEG" Association="db_chocolateriaModel.FK_USUARIO_ASSOCIATI_PRIVILEG">
+            <End Role="Privilegios" EntitySet="Privilegios" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_STOCK_PR_PRODUCTO__PRODUCTO" Association="db_chocolateriaModel.FK_STOCK_PR_PRODUCTO__PRODUCTO">
+            <End Role="Producto" EntitySet="Producto" />
+            <End Role="Stock_producto" EntitySet="Stock_producto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TARJETA_TIPO_TARJ_TIPO_TAR" Association="db_chocolateriaModel.FK_TARJETA_TIPO_TARJ_TIPO_TAR">
+            <End Role="Tipo_tarjeta" EntitySet="Tipo_tarjeta" />
+            <End Role="Tarjeta" EntitySet="Tarjeta" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Boleta">
+          <Key>
+            <PropertyRef Name="bol_Id" />
+          </Key>
+          <Property Name="bol_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bol_Detalle" Type="Int32" />
+          <Property Name="bol_Nombre_Chocolateria" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Pago" Relationship="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA" FromRole="Boleta" ToRole="Pago" />
+        </EntityType>
+        <EntityType Name="Carro_Compra">
+          <Key>
+            <PropertyRef Name="car_id" />
+          </Key>
+          <Property Name="car_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ped_id" Type="Int32" />
+          <Property Name="usu_nombre" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="pag_id" Type="Int32" />
+          <Property Name="car_fecha" Type="DateTime" />
+          <Property Name="car_total" Type="Int32" />
+          <NavigationProperty Name="Usuario" Relationship="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO" FromRole="Carro_Compra" ToRole="Usuario" />
+          <NavigationProperty Name="Pago" Relationship="db_chocolateriaModel.FK_CARRO_CO_CARRO_PAG_PAGO" FromRole="Carro_Compra" ToRole="Pago" />
+          <NavigationProperty Name="Pedido" Relationship="db_chocolateriaModel.FK_CARRO_CO_CARRO_PED_PEDIDO" FromRole="Carro_Compra" ToRole="Pedido" />
+          <NavigationProperty Name="Detalle_Producto" Relationship="db_chocolateriaModel.FK_DETALLE__CARRO_DET_CARRO_CO" FromRole="Carro_Compra" ToRole="Detalle_Producto" />
+        </EntityType>
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="cat_id" />
+          </Key>
+          <Property Name="cat_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Producto" Relationship="db_chocolateriaModel.FK_PRODUCTO_CATEGORIA_CATEGORI" FromRole="Categoria" ToRole="Producto" />
+        </EntityType>
+        <EntityType Name="Detalle_Producto">
+          <Key>
+            <PropertyRef Name="car_id" />
+            <PropertyRef Name="det_Id" />
+          </Key>
+          <Property Name="car_id" Type="Int32" Nullable="false" />
+          <Property Name="det_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pro_Id" Type="Int32" Nullable="false" />
+          <Property Name="det_cantidad" Type="Int32" />
+          <Property Name="det_valor_unitario" Type="Int32" />
+          <NavigationProperty Name="Carro_Compra" Relationship="db_chocolateriaModel.FK_DETALLE__CARRO_DET_CARRO_CO" FromRole="Detalle_Producto" ToRole="Carro_Compra" />
+          <NavigationProperty Name="Producto" Relationship="db_chocolateriaModel.FK_DETALLE__PRODUCTO__PRODUCTO" FromRole="Detalle_Producto" ToRole="Producto" />
+        </EntityType>
+        <EntityType Name="Pago">
+          <Key>
+            <PropertyRef Name="pag_id" />
+          </Key>
+          <Property Name="pag_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tip_id" Type="Int32" Nullable="false" />
+          <Property Name="bol_Id" Type="Int32" Nullable="false" />
+          <Property Name="pag_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Boleta" Relationship="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA" FromRole="Pago" ToRole="Boleta" />
+          <NavigationProperty Name="Carro_Compra" Relationship="db_chocolateriaModel.FK_CARRO_CO_CARRO_PAG_PAGO" FromRole="Pago" ToRole="Carro_Compra" />
+          <NavigationProperty Name="Tipo_Pago" Relationship="db_chocolateriaModel.FK_PAGO_TIPOPAGO__TIPO_PAG" FromRole="Pago" ToRole="Tipo_Pago" />
+        </EntityType>
+        <EntityType Name="Pedido">
+          <Key>
+            <PropertyRef Name="ped_id" />
+          </Key>
+          <Property Name="ped_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="est_id" Type="Int32" Nullable="false" />
+          <Property Name="tar_id" Type="Int32" />
+          <Property Name="ped_activo" Type="Boolean" />
+          <Property Name="ped_fechaEnvio" Type="DateTime" />
+          <Property Name="ped_direccionEnvio" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Carro_Compra" Relationship="db_chocolateriaModel.FK_CARRO_CO_CARRO_PED_PEDIDO" FromRole="Pedido" ToRole="Carro_Compra" />
+          <NavigationProperty Name="Tarjeta" Relationship="db_chocolateriaModel.FK_PEDIDO_ASSOCIATI_TARJETA" FromRole="Pedido" ToRole="Tarjeta" />
+          <NavigationProperty Name="Tipo_estado" Relationship="db_chocolateriaModel.FK_PEDIDO_ESTADO_PE_TIPO_EST" FromRole="Pedido" ToRole="Tipo_estado" />
+        </EntityType>
+        <EntityType Name="Persona">
+          <Key>
+            <PropertyRef Name="per_rut" />
+          </Key>
+          <Property Name="per_rut" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="per_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="per_apellidoP" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="per_apellidoM" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="per_direccion" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="per_telefono" Type="Int32" />
+          <Property Name="per_fechaNac" Type="DateTime" />
+          <NavigationProperty Name="Usuario" Relationship="db_chocolateriaModel.FK_USUARIO_PERSONA_U_PERSONA" FromRole="Persona" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Privilegios">
+          <Key>
+            <PropertyRef Name="pri_id" />
+          </Key>
+          <Property Name="pri_id" Type="Int32" Nullable="false" />
+          <Property Name="pri_descripcion" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Usuario" Relationship="db_chocolateriaModel.FK_USUARIO_ASSOCIATI_PRIVILEG" FromRole="Privilegios" ToRole="Usuario" />
+        </EntityType>
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="pro_Id" />
+          </Key>
+          <Property Name="pro_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cat_id" Type="Int32" Nullable="false" />
+          <Property Name="pro_Nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="pro_Precio" Type="Int32" />
+          <Property Name="pro_Imagen" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Categoria" Relationship="db_chocolateriaModel.FK_PRODUCTO_CATEGORIA_CATEGORI" FromRole="Producto" ToRole="Categoria" />
+          <NavigationProperty Name="Detalle_Producto" Relationship="db_chocolateriaModel.FK_DETALLE__PRODUCTO__PRODUCTO" FromRole="Producto" ToRole="Detalle_Producto" />
+          <NavigationProperty Name="Stock_producto" Relationship="db_chocolateriaModel.FK_STOCK_PR_PRODUCTO__PRODUCTO" FromRole="Producto" ToRole="Stock_producto" />
+        </EntityType>
+        <EntityType Name="Stock_producto">
+          <Key>
+            <PropertyRef Name="sto_id" />
+          </Key>
+          <Property Name="sto_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="pro_Id" Type="Int32" />
+          <Property Name="sto_fechaRegistro" Type="DateTime" />
+          <Property Name="sto_fechaVencimiento" Type="DateTime" />
+          <NavigationProperty Name="Producto" Relationship="db_chocolateriaModel.FK_STOCK_PR_PRODUCTO__PRODUCTO" FromRole="Stock_producto" ToRole="Producto" />
+        </EntityType>
+        <EntityType Name="Tarjeta">
+          <Key>
+            <PropertyRef Name="tar_id" />
+          </Key>
+          <Property Name="tar_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tipota_id" Type="Int32" Nullable="false" />
+          <Property Name="tar_texto" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Pedido" Relationship="db_chocolateriaModel.FK_PEDIDO_ASSOCIATI_TARJETA" FromRole="Tarjeta" ToRole="Pedido" />
+          <NavigationProperty Name="Tipo_tarjeta" Relationship="db_chocolateriaModel.FK_TARJETA_TIPO_TARJ_TIPO_TAR" FromRole="Tarjeta" ToRole="Tipo_tarjeta" />
+        </EntityType>
+        <EntityType Name="Tipo_estado">
+          <Key>
+            <PropertyRef Name="est_id" />
+          </Key>
+          <Property Name="est_id" Type="Int32" Nullable="false" />
+          <Property Name="est_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Pedido" Relationship="db_chocolateriaModel.FK_PEDIDO_ESTADO_PE_TIPO_EST" FromRole="Tipo_estado" ToRole="Pedido" />
+        </EntityType>
+        <EntityType Name="Tipo_Pago">
+          <Key>
+            <PropertyRef Name="tip_id" />
+          </Key>
+          <Property Name="tip_id" Type="Int32" Nullable="false" />
+          <Property Name="tip_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Pago" Relationship="db_chocolateriaModel.FK_PAGO_TIPOPAGO__TIPO_PAG" FromRole="Tipo_Pago" ToRole="Pago" />
+        </EntityType>
+        <EntityType Name="Tipo_tarjeta">
+          <Key>
+            <PropertyRef Name="tipota_id" />
+          </Key>
+          <Property Name="tipota_id" Type="Int32" Nullable="false" />
+          <Property Name="tipota_nombre" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Tarjeta" Relationship="db_chocolateriaModel.FK_TARJETA_TIPO_TARJ_TIPO_TAR" FromRole="Tipo_tarjeta" ToRole="Tarjeta" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="usu_nombre" />
+          </Key>
+          <Property Name="usu_nombre" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="pri_id" Type="Int32" />
+          <Property Name="per_rut" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="usu_contrasena" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="usu_correo" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="usu_activo" Type="Boolean" />
+          <Property Name="usu_log" Type="Boolean" />
+          <NavigationProperty Name="Carro_Compra" Relationship="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO" FromRole="Usuario" ToRole="Carro_Compra" />
+          <NavigationProperty Name="Persona" Relationship="db_chocolateriaModel.FK_USUARIO_PERSONA_U_PERSONA" FromRole="Usuario" ToRole="Persona" />
+          <NavigationProperty Name="Privilegios" Relationship="db_chocolateriaModel.FK_USUARIO_ASSOCIATI_PRIVILEG" FromRole="Usuario" ToRole="Privilegios" />
+        </EntityType>
+        <Association Name="FK_PAGO_PAGO_BOLE_BOLETA">
+          <End Role="Boleta" Type="db_chocolateriaModel.Boleta" Multiplicity="1" />
+          <End Role="Pago" Type="db_chocolateriaModel.Pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Boleta">
+              <PropertyRef Name="bol_Id" />
+            </Principal>
+            <Dependent Role="Pago">
+              <PropertyRef Name="bol_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARRO_CO_ASSOCIATI_USUARIO">
+          <End Role="Usuario" Type="db_chocolateriaModel.Usuario" Multiplicity="1" />
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Carro_Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuario">
+              <PropertyRef Name="usu_nombre" />
+            </Principal>
+            <Dependent Role="Carro_Compra">
+              <PropertyRef Name="usu_nombre" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARRO_CO_CARRO_PAG_PAGO">
+          <End Role="Pago" Type="db_chocolateriaModel.Pago" Multiplicity="0..1" />
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Carro_Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pago">
+              <PropertyRef Name="pag_id" />
+            </Principal>
+            <Dependent Role="Carro_Compra">
+              <PropertyRef Name="pag_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CARRO_CO_CARRO_PED_PEDIDO">
+          <End Role="Pedido" Type="db_chocolateriaModel.Pedido" Multiplicity="0..1" />
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Carro_Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedido">
+              <PropertyRef Name="ped_id" />
+            </Principal>
+            <Dependent Role="Carro_Compra">
+              <PropertyRef Name="ped_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__CARRO_DET_CARRO_CO">
+          <End Role="Carro_Compra" Type="db_chocolateriaModel.Carro_Compra" Multiplicity="1" />
+          <End Role="Detalle_Producto" Type="db_chocolateriaModel.Detalle_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Carro_Compra">
+              <PropertyRef Name="car_id" />
+            </Principal>
+            <Dependent Role="Detalle_Producto">
+              <PropertyRef Name="car_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PRODUCTO_CATEGORIA_CATEGORI">
+          <End Role="Categoria" Type="db_chocolateriaModel.Categoria" Multiplicity="1" />
+          <End Role="Producto" Type="db_chocolateriaModel.Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="cat_id" />
+            </Principal>
+            <Dependent Role="Producto">
+              <PropertyRef Name="cat_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__PRODUCTO__PRODUCTO">
+          <End Role="Producto" Type="db_chocolateriaModel.Producto" Multiplicity="1" />
+          <End Role="Detalle_Producto" Type="db_chocolateriaModel.Detalle_Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producto">
+              <PropertyRef Name="pro_Id" />
+            </Principal>
+            <Dependent Role="Detalle_Producto">
+              <PropertyRef Name="pro_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PAGO_TIPOPAGO__TIPO_PAG">
+          <End Role="Tipo_Pago" Type="db_chocolateriaModel.Tipo_Pago" Multiplicity="1" />
+          <End Role="Pago" Type="db_chocolateriaModel.Pago" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_Pago">
+              <PropertyRef Name="tip_id" />
+            </Principal>
+            <Dependent Role="Pago">
+              <PropertyRef Name="tip_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PEDIDO_ASSOCIATI_TARJETA">
+          <End Role="Tarjeta" Type="db_chocolateriaModel.Tarjeta" Multiplicity="0..1" />
+          <End Role="Pedido" Type="db_chocolateriaModel.Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tarjeta">
+              <PropertyRef Name="tar_id" />
+            </Principal>
+            <Dependent Role="Pedido">
+              <PropertyRef Name="tar_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PEDIDO_ESTADO_PE_TIPO_EST">
+          <End Role="Tipo_estado" Type="db_chocolateriaModel.Tipo_estado" Multiplicity="1" />
+          <End Role="Pedido" Type="db_chocolateriaModel.Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_estado">
+              <PropertyRef Name="est_id" />
+            </Principal>
+            <Dependent Role="Pedido">
+              <PropertyRef Name="est_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO_PERSONA_U_PERSONA">
+          <End Role="Persona" Type="db_chocolateriaModel.Persona" Multiplicity="1" />
+          <End Role="Usuario" Type="db_chocolateriaModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Persona">
+              <PropertyRef Name="per_rut" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="per_rut" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIO_ASSOCIATI_PRIVILEG">
+          <End Role="Privilegios" Type="db_chocolateriaModel.Privilegios" Multiplicity="0..1" />
+          <End Role="Usuario" Type="db_chocolateriaModel.Usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Privilegios">
+              <PropertyRef Name="pri_id" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="pri_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_STOCK_PR_PRODUCTO__PRODUCTO">
+          <End Role="Producto" Type="db_chocolateriaModel.Producto" Multiplicity="0..1" />
+          <End Role="Stock_producto" Type="db_chocolateriaModel.Stock_producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producto">
+              <PropertyRef Name="pro_Id" />
+            </Principal>
+            <Dependent Role="Stock_producto">
+              <PropertyRef Name="pro_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TARJETA_TIPO_TARJ_TIPO_TAR">
+          <End Role="Tipo_tarjeta" Type="db_chocolateriaModel.Tipo_tarjeta" Multiplicity="1" />
+          <End Role="Tarjeta" Type="db_chocolateriaModel.Tarjeta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo_tarjeta">
+              <PropertyRef Name="tipota_id" />
+            </Principal>
+            <Dependent Role="Tarjeta">
+              <PropertyRef Name="tipota_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db_chocolateriaModelStoreContainer" CdmEntityContainer="db_chocolateriaEntities14">
+          <EntitySetMapping Name="Boleta">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Boleta">
+              <MappingFragment StoreEntitySet="Boleta">
+                <ScalarProperty Name="bol_Id" ColumnName="bol_Id" />
+                <ScalarProperty Name="bol_Detalle" ColumnName="bol_Detalle" />
+                <ScalarProperty Name="bol_Nombre_Chocolateria" ColumnName="bol_Nombre_Chocolateria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Carro_Compra">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Carro_Compra">
+              <MappingFragment StoreEntitySet="Carro_Compra">
+                <ScalarProperty Name="car_id" ColumnName="car_id" />
+                <ScalarProperty Name="ped_id" ColumnName="ped_id" />
+                <ScalarProperty Name="usu_nombre" ColumnName="usu_nombre" />
+                <ScalarProperty Name="pag_id" ColumnName="pag_id" />
+                <ScalarProperty Name="car_fecha" ColumnName="car_fecha" />
+                <ScalarProperty Name="car_total" ColumnName="car_total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categoria">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Categoria">
+              <MappingFragment StoreEntitySet="Categoria">
+                <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+                <ScalarProperty Name="cat_nombre" ColumnName="cat_nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Detalle_Producto">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Detalle_Producto">
+              <MappingFragment StoreEntitySet="Detalle_Producto">
+                <ScalarProperty Name="car_id" ColumnName="car_id" />
+                <ScalarProperty Name="det_Id" ColumnName="det_Id" />
+                <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
+                <ScalarProperty Name="det_cantidad" ColumnName="det_cantidad" />
+                <ScalarProperty Name="det_valor_unitario" ColumnName="det_valor_unitario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pago">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Pago">
+              <MappingFragment StoreEntitySet="Pago">
+                <ScalarProperty Name="pag_id" ColumnName="pag_id" />
+                <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+                <ScalarProperty Name="bol_Id" ColumnName="bol_Id" />
+                <ScalarProperty Name="pag_nombre" ColumnName="pag_nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pedido">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Pedido">
+              <MappingFragment StoreEntitySet="Pedido">
+                <ScalarProperty Name="ped_id" ColumnName="ped_id" />
+                <ScalarProperty Name="est_id" ColumnName="est_id" />
+                <ScalarProperty Name="tar_id" ColumnName="tar_id" />
+                <ScalarProperty Name="ped_activo" ColumnName="ped_activo" />
+                <ScalarProperty Name="ped_fechaEnvio" ColumnName="ped_fechaEnvio" />
+                <ScalarProperty Name="ped_direccionEnvio" ColumnName="ped_direccionEnvio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Persona">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Persona">
+              <MappingFragment StoreEntitySet="Persona">
+                <ScalarProperty Name="per_rut" ColumnName="per_rut" />
+                <ScalarProperty Name="per_nombre" ColumnName="per_nombre" />
+                <ScalarProperty Name="per_apellidoP" ColumnName="per_apellidoP" />
+                <ScalarProperty Name="per_apellidoM" ColumnName="per_apellidoM" />
+                <ScalarProperty Name="per_direccion" ColumnName="per_direccion" />
+                <ScalarProperty Name="per_telefono" ColumnName="per_telefono" />
+                <ScalarProperty Name="per_fechaNac" ColumnName="per_fechaNac" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Privilegios">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Privilegios">
+              <MappingFragment StoreEntitySet="Privilegios">
+                <ScalarProperty Name="pri_id" ColumnName="pri_id" />
+                <ScalarProperty Name="pri_descripcion" ColumnName="pri_descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Producto">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Producto">
+              <MappingFragment StoreEntitySet="Producto">
+                <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
+                <ScalarProperty Name="cat_id" ColumnName="cat_id" />
+                <ScalarProperty Name="pro_Nombre" ColumnName="pro_Nombre" />
+                <ScalarProperty Name="pro_Precio" ColumnName="pro_Precio" />
+                <ScalarProperty Name="pro_Imagen" ColumnName="pro_Imagen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Stock_producto">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Stock_producto">
+              <MappingFragment StoreEntitySet="Stock_producto">
+                <ScalarProperty Name="sto_id" ColumnName="sto_id" />
+                <ScalarProperty Name="pro_Id" ColumnName="pro_Id" />
+                <ScalarProperty Name="sto_fechaRegistro" ColumnName="sto_fechaRegistro" />
+                <ScalarProperty Name="sto_fechaVencimiento" ColumnName="sto_fechaVencimiento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tarjeta">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Tarjeta">
+              <MappingFragment StoreEntitySet="Tarjeta">
+                <ScalarProperty Name="tar_id" ColumnName="tar_id" />
+                <ScalarProperty Name="tipota_id" ColumnName="tipota_id" />
+                <ScalarProperty Name="tar_texto" ColumnName="tar_texto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_estado">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Tipo_estado">
+              <MappingFragment StoreEntitySet="Tipo_estado">
+                <ScalarProperty Name="est_id" ColumnName="est_id" />
+                <ScalarProperty Name="est_nombre" ColumnName="est_nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_Pago">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Tipo_Pago">
+              <MappingFragment StoreEntitySet="Tipo_Pago">
+                <ScalarProperty Name="tip_id" ColumnName="tip_id" />
+                <ScalarProperty Name="tip_nombre" ColumnName="tip_nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo_tarjeta">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Tipo_tarjeta">
+              <MappingFragment StoreEntitySet="Tipo_tarjeta">
+                <ScalarProperty Name="tipota_id" ColumnName="tipota_id" />
+                <ScalarProperty Name="tipota_nombre" ColumnName="tipota_nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="db_chocolateriaModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="usu_nombre" ColumnName="usu_nombre" />
+                <ScalarProperty Name="pri_id" ColumnName="pri_id" />
+                <ScalarProperty Name="per_rut" ColumnName="per_rut" />
+                <ScalarProperty Name="usu_contrasena" ColumnName="usu_contrasena" />
+                <ScalarProperty Name="usu_correo" ColumnName="usu_correo" />
+                <ScalarProperty Name="usu_activo" ColumnName="usu_activo" />
+                <ScalarProperty Name="usu_log" ColumnName="usu_log" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="db_chocolateriaModel.Boleta" Width="1.5" PointX="3" PointY="8.5" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Carro_Compra" Width="1.5" PointX="7.5" PointY="1" Height="2.9417936197916665" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Categoria" Width="1.5" PointX="5.25" PointY="5.625" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Detalle_Producto" Width="1.5" PointX="9.75" PointY="1.25" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Pago" Width="1.5" PointX="5.25" PointY="9.5" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Pedido" Width="1.5" PointX="5.25" PointY="1.125" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Persona" Width="1.5" PointX="3" PointY="13.5" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Privilegios" Width="1.5" PointX="3" PointY="16.75" Height="1.595683593749996" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Producto" Width="1.5" PointX="7.5" PointY="5.125" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Stock_producto" Width="1.5" PointX="9.75" PointY="5.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Tarjeta" Width="1.5" PointX="3" PointY="1.5" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Tipo_estado" Width="1.5" PointX="3" PointY="5.625" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Tipo_Pago" Width="1.5" PointX="3" PointY="11.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Tipo_tarjeta" Width="1.5" PointX="0.75" PointY="1.625" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_chocolateriaModel.Usuario" Width="1.5" PointX="5.25" PointY="14.375" Height="2.9417936197916692" IsExpanded="true" />
+        <AssociationConnector Association="db_chocolateriaModel.FK_PAGO_PAGO_BOLE_BOLETA" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.8939925130208337" />
+          <ConnectorPoint PointX="5.25" PointY="9.8939925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_CARRO_CO_ASSOCIATI_USUARIO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="14.376152846153847" />
+          <ConnectorPoint PointX="7.125" PointY="14.001152846153847" />
+          <ConnectorPoint PointX="7.125" PointY="2.4708968098958328" />
+          <ConnectorPoint PointX="7.5" PointY="2.4708968098958328" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_CARRO_CO_CARRO_PAG_PAGO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="9.56346053846154" />
+          <ConnectorPoint PointX="7.0660744349011209" PointY="9.24738610356042" />
+          <ConnectorPoint PointX="7.1839255650988791" PointY="9.129534973362663" />
+          <ConnectorPoint PointX="7.3125" PointY="9.0009605384615412" />
+          <ConnectorPoint PointX="7.3125" PointY="3.2375972148437504" />
+          <ConnectorPoint PointX="7.5" PointY="3.2375972148437504" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_CARRO_CO_CARRO_PED_PEDIDO" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="1.7354484049479164" />
+          <ConnectorPoint PointX="7.5" PointY="1.7354484049479164" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_DETALLE__CARRO_DET_CARRO_CO" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="2.4324446614583328" />
+          <ConnectorPoint PointX="9.75" PointY="2.4324446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_PRODUCTO_CATEGORIA_CATEGORI" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="6.422841796875" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="6.4228417968749989" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="6.422841796875" />
+          <ConnectorPoint PointX="7.229166666666667" PointY="6.4228417968749989" />
+          <ConnectorPoint PointX="7.395833333333333" PointY="6.422841796875" />
+          <ConnectorPoint PointX="7.5" PointY="6.422841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_DETALLE__PRODUCTO__PRODUCTO" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="5.125" />
+          <ConnectorPoint PointX="9.375" PointY="4.75" />
+          <ConnectorPoint PointX="9.375" PointY="3.0549189921875" />
+          <ConnectorPoint PointX="9.75" PointY="3.0549189921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_PAGO_TIPOPAGO__TIPO_PAG" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.494944661458334" />
+          <ConnectorPoint PointX="5.25" PointY="11.494944661458334" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_PEDIDO_ASSOCIATI_TARJETA" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="2.4901432291666676" />
+          <ConnectorPoint PointX="5.25" PointY="2.4901432291666676" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_PEDIDO_ESTADO_PE_TIPO_EST" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.625" />
+          <ConnectorPoint PointX="4.875" PointY="5.25" />
+          <ConnectorPoint PointX="4.875" PointY="3.2135697083333343" />
+          <ConnectorPoint PointX="5.25" PointY="3.2135697083333343" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_USUARIO_PERSONA_U_PERSONA" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="15.216095377604166" />
+          <ConnectorPoint PointX="5.25" PointY="15.216095377604166" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_USUARIO_ASSOCIATI_PRIVILEG" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="17.033396809895834" />
+          <ConnectorPoint PointX="5.25" PointY="17.033396809895834" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_STOCK_PR_PRODUCTO__PRODUCTO" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="6.4901432291666659" />
+          <ConnectorPoint PointX="9.75" PointY="6.4901432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="db_chocolateriaModel.FK_TARJETA_TIPO_TARJ_TIPO_TAR" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.4228417968750016" />
+          <ConnectorPoint PointX="3" PointY="2.4228417968750016" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
