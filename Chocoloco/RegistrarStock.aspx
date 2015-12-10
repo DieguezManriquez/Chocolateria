@@ -8,25 +8,24 @@
  <h2>Registro Stock de producto</h2>
     <table>
     <tr>
-    <td></td>
+    <td>Nombre:</td>
     <td> 
         <asp:TextBox ID="txtNombre" runat="server" required="true"></asp:TextBox></td>
     </tr>
     <tr>
-    <td>Precio:</td>
+    <td>Cantidad:</td>
     <td> 
         <asp:TextBox ID="txtPrecio" runat="server" required="true"></asp:TextBox></td>
     </tr>
     <tr>
-    <td></td>
+    <td>Fecha de vencimiento:</td>
     <td> 
         
         </td>
     </tr>
     
     <tr>
-    <td><asp:Button ID="btnRegistrarProducto" runat="server" Text="Registrar producto" onclick="btnRegistrarProducto_Click" 
-             />
+    <td><asp:Button ID="btnRegistrarStock" runat="server" Text="Registrar Stock" onclick="btnRegistrarStock_Click"/>
         
     </td>
     </tr>
@@ -34,5 +33,6 @@
     </table>
     <asp:GridView ID="GridView1" runat="server" DataSourceID="SqlDataSource1">
     </asp:GridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
     </div>
 </asp:Content>

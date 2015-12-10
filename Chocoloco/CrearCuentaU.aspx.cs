@@ -47,7 +47,6 @@ namespace Chocoloco
                 u.usu_contrasena = txtPassword.Text;
                 u.usu_correo = txtEmail.Text;
                 u.usu_activo = true;
-                u.usu_log = false;
                 choco.Usuario.AddObject(u);
                 choco.SaveChanges();
                 Response.Write("<script>alert('Uusuario registrado')</script>");

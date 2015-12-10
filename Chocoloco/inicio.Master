@@ -8,6 +8,8 @@
         <link href="css/EstiloBase.css" type="text/css" rel="Stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+       <script type="text/javascript" src="jquery/jquery-1.9.1/jquery-1.9.1.js">
+</script>
     <script type="text/javascript" src="js/jsMaster.js">
 </script>
 <script type="text/javascript" src="js/validCampoFranz.js">

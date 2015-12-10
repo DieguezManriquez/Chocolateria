@@ -33,7 +33,7 @@ namespace Chocoloco
                     if (password == u.usu_contrasena)
                     {
                         Response.Write("<script>alert('inicio')</script>");
-                        u.usu_log = true;
+                  
                         choco.SaveChanges();
                         Response.Redirect("Inicio.aspx");
                     }
