@@ -13,3 +13,5 @@ C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\obj\Debug\Cho
 C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\obj\Debug\Chocoloco.pdb
 C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\bin\Chocoloco.dll
 C:\Users\Tamara\Desktop\Chocolateria Github\Chocolateria\Chocoloco\bin\Chocoloco.pdb
+C:\Users\Rabbit\Desktop\Chocolateria\Chocoloco\obj\Debug\Chocoloco.csprojResolveAssemblyReference.cache
+C:\Users\Rabbit\Desktop\Chocolateria\Chocoloco\obj\Debug\Chocoloco.dll

@@ -1,6 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/inicio.Master" AutoEventWireup="true" CodeBehind="MiCuenta.aspx.cs" Inherits="Chocoloco.MiCuenta" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<style type="text/css">
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <% 
+       if (Session["nombre"] == null)
+       {
+           
+      %>
+    <asp:Label ID="Label1" runat="server" Text="Debe iniciar sesion"></asp:Label>
+   
+
+ <%
+       }
+       else
+       {
+    %>      
+   <style type="text/css">
     .style1
     {
         width: 176px;
@@ -15,8 +31,7 @@
         height: 32px;
     }
 </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <div id="contenido">
     <h1>Mi cuenta</h1>
 <div id="cosa">
@@ -32,41 +47,50 @@
     <tr>
     <td class="style1" 
             style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Rut:</td>
-    <td>*rut usuario*</td>
+    <td>
+        <asp:Label ID="lrut" runat="server" Text="Label"></asp:Label></td>
     </tr>
     <tr>
     <td class="style1" 
             style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Nombre completo:</td>
-    <td>*nombre usuario*</td>
+    <td><asp:Label ID="ln" runat="server" Text=""/></td>
     </tr>
     <tr>
     <td class="style1" 
             style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Apellido Paterno:</td>
-    <td>*apellido usuario*</td>
+    <td><asp:Label ID="lpp" runat="server" Text="Label"></asp:Label></td>
     </tr>
     <tr>
     <td class="style1" 
             style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Apellido Materno:</td>
-    <td>*apellido usuario*</td>
+    <td><asp:Label ID="lpm" runat="server" Text="Label"></asp:Label></td>
     </tr>
    <tr>
     <td class="style1" 
            style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Dirección domicilio:</td>
-    <td>*dirección usuario*</td>
+    <td><asp:Label ID="ldirec" runat="server" Text="Label"></asp:Label></td>
     </tr>
     <tr>
     <td class="style1" 
             style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Teléfono:</td>
-    <td>*telefono usuario*</td>
+    <td><asp:Label ID="ltelef" runat="server" Text="Label"></asp:Label></td>
     </tr>
     <tr>
     <td class="style2" 
             style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Fecha de nacimiento:</td>
-    <td class="style3">*fecha usuario*</td>
+    <td class="style3"><asp:Label ID="lfecha" runat="server" ></asp:Label></td>
     </tr>
         
     </table>
 
 </div>
 </div>
+
+<% 
+    }
+    
+    %>
+    
+    
+     
 </asp:Content>

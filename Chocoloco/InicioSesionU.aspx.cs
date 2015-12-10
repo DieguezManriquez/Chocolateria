@@ -16,7 +16,13 @@ namespace Chocoloco
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Session["nombre"] != null)
+                {
+                    lnombre.Text = "Usuario ya logueado: " + Session["nombre"];
+                }
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -32,10 +38,11 @@ namespace Chocoloco
                     Response.Write("<script>alert('Usuario')</script>");
                     if (password == u.usu_contrasena)
                     {
-                        Response.Write("<script>alert('inicio')</script>");
-                  
+                        Session["nombre"] = txtNombre.Text.ToString();
+                        Session["rut"] = u.per_rut;
                         choco.SaveChanges();
                         Response.Redirect("Inicio.aspx");
+                        
                     }
                     else
                     {
@@ -58,7 +65,6 @@ namespace Chocoloco
                 Response.Write("<script>alert('wat wea')</script>");
                 
             }
-
 
 
 

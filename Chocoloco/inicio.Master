@@ -20,14 +20,26 @@
 <body>
     <form id="form1" runat="server">
     <div id="header">
+   
+        
         <div class="menu">
             <a href="ProdPopulares.aspx">Productos Populares</a> <a href="Novedades.aspx">Novedades</a> <a href="NuestrosProductos.aspx">Nuestros Productos</a>
             <a href="Nosotros.aspx">Nosotros</a>
         </div>
         <div id="menu2">
             <div class="usuario">
-                <a href="MiCuenta.aspx">Mi Cuenta</a> <a href="PedidoU.aspx">Pedido</a> <a href="InicioSesionU.aspx">
-                    Ingresar</a>
+                <a href="MiCuenta.aspx">Mi Cuenta</a> 
+                <a href="PedidoU.aspx">Pedido</a> 
+                <a href="InicioSesionU.aspx">Ingresar</a>
+                 <%
+        if (Session["nombre"] != null)
+        
+        {
+            %>
+                        <a href="LogOut.aspx">Log Out</a>
+                       <% 
+                           }
+                            %>
             </div>
         </div>
         <div id="principal">

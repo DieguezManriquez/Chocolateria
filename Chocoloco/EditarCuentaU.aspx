@@ -5,7 +5,16 @@
     {
         width: 176px;
     }
-    </style>
+    .style2
+    {
+        width: 176px;
+        height: 32px;
+    }
+    .style3
+    {
+        height: 32px;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div id="contenido">
@@ -13,37 +22,47 @@
 <ul>
 <li><a href="MiCarro.aspx">Mi carro</a></li>
 <li><a href="PedidoU.aspx">Mis pedidos</a></li>
-<li><a href="ActualizarDatosU.aspx">Actualizar datos personales</a></li>
+<li><a href="EditarCuentaU.aspx">Cambiar contaseña</a></li>
 </ul>
 </div>
 <div id="cuenta"> 
-    <table style="width: 362px">
-    <h1>Cambiar contraseña del usuario</h1>
+    <h1>Cambiar Password:</h1>
+    <table style="width: 405px; height: 267px;">
     <tr>
-    <td><asp:ChangePassword ID="ChangePassword1" runat="server" 
-            ChangePasswordTitleText="" BackColor="#EFF3FB" BorderColor="#B5C7DE" 
-            BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" 
-            Font-Size="0.8em" Height="225px" Width="363px">
-        <CancelButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" 
-            BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
-        <ChangePasswordButtonStyle BackColor="White" BorderColor="#507CD1" 
-            BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" 
-            ForeColor="#284E98" />
-        <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" 
-            BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" 
-            ForeColor="#284E98" />
-        <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
-        <PasswordHintStyle Font-Italic="True" ForeColor="#507CD1" />
-        <TextBoxStyle Font-Size="0.8em" />
-        <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="0.9em" 
-            ForeColor="White" />
-        </asp:ChangePassword>
-    </td>
+    <td class="style1" 
+            style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Contraseña:</td>
+    <td>
+        <asp:TextBox ID="txtpas0" TextMode="Password" runat="server" value="" Text="" ></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+    <td class="style1" 
+            style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Nueva Contraseña:</td>
+    <td>&nbsp;<asp:TextBox ID="txtpas1" type="password" runat="server"></asp:TextBox></td>
+    </tr>
+    <tr>
+    <td class="style1" 
+            style="margin: 5px; padding: 5px; border-style: none; list-style-type: none; border-spacing: 8px;">Confirmar Contraseña:</td>
+    <td> <asp:TextBox ID="txtpas2" type="password" runat="server"></asp:TextBox></td>
     </tr>
    
-   
+     <tr>
+    <td class="style2" >
+        <asp:Button ID="Button1" runat="server" Text="Actualizar" 
+            onclick="Button1_Click" />
+         </td>
+    </tr>
+        
+     <tr>
+    <td class="style2" >
+        &nbsp;</td>
+    <td class="style3">
+        
+        &nbsp;</td>
+    </tr>
         
     </table>
-    </div>
-    </div>
+
+</div>
+</div>
 </asp:Content>

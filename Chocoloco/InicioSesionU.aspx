@@ -2,11 +2,24 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div id="contenido">
+     <div id="contenido">
     <div id="sesion">
         <p>
             INICIO SESION</p>
             <br />
+             <%
+                 if (Session["nombre"] != null)
+                 {
+
+                %>
+        <asp:Label ID="lnombre" runat="server" Text="Label"></asp:Label>
+                <%
+                 }
+                 else
+                 {
+             
+             
+              %>
         <ul>
             <li>
             <a style="color:Gray">Nombre de usuario:</a>
@@ -26,6 +39,7 @@
                </a>
             </li>
         </ul>
+        <% }%>
           </div>
     </div>
 </asp:Content>
