@@ -164,11 +164,15 @@
     <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui.theme.css" />
     <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui.theme.min.css" />
     <Content Include="jquery\jquery-ui-1.11.4.custom__\jquery-ui_.css" />
+    <Content Include="jquery\jquery-ui.min.css" />
+    <Content Include="jquery\jquery-ui.min.js" />
+    <Content Include="jquery\jquery.js" />
     <Content Include="js\ControlarProductos.js" />
     <Content Include="js\jsMaster.js" />
     <Content Include="js\RegistroPro.js" />
     <Content Include="js\validCampoFranz.js" />
     <Content Include="ListarPro.aspx" />
+    <Content Include="LogOut.aspx" />
     <Content Include="MiCarro.aspx" />
     <Content Include="MiCuenta.aspx" />
     <Content Include="Nosotros.aspx" />
@@ -305,6 +309,13 @@
     </Compile>
     <Compile Include="ListarPro.aspx.designer.cs">
       <DependentUpon>ListarPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
     </Compile>
     <Compile Include="MiCarro.aspx.cs">
       <DependentUpon>MiCarro.aspx</DependentUpon>

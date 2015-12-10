@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/inicio.Master" AutoEventWireup="true" CodeBehind="ActualizarDatosU.aspx.cs" Inherits="Chocoloco.ActualizarDatosU" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/inicio.Master" AutoEventWireup="true" CodeBehind="ActualizarDatosU.aspx.cs" Inherits="Chocoloco.ActualizarDatosU" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <style type="text/css">
     .style1

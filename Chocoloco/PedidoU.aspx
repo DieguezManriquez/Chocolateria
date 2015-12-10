@@ -3,8 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div id="contenido">
-
-<h1 class="tituped">Pedidos de *Nombre usuario* </h1>
+<%
+    if (Session["nombre"] != null)
+    {
+     %>
+    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
      <table ID="tabla" style="height: 208px; width: 645px">
@@ -56,6 +59,14 @@
     <br /><br /> <br />
     <a href="PedidoU.aspx">Volver al principio</a>
 
-
+    <%
+    }
+    else
+    {
+        
+         %>
+         <%
+    }
+              %>
 </div>
 </asp:Content>

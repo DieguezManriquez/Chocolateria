@@ -2,6 +2,18 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<script src="jquery/jquery.js" type="text/javascript"></script>
+<script src="jquery/jquery-ui.min.js" type="text/javascript"></script>
+<link href="jquery/jquery-ui.min.css" rel="Stylesheet" />
+  <script type="text/javascript">
+      $(function () {
+          $(".fecha").datepicker({
+              changeMonth: true,
+              changeYear: true,
+              yearRange: 'c-80:c+100'
+          });
+      });
+  </script>
  <div id="contenido">
     <div id="sesion">
         <p>
@@ -55,11 +67,9 @@
                 Fecha nacimiento:
                 </td>
                 <td>
-                    &nbsp;</td>
-                  <td>
-                      &nbsp;</td>
-                  <td>
-                      &nbsp;</td>
+                <p><input type="text" id="txtfecha" runat="server" class="fecha" /></p>
+                    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+                </td>
                 <td>
                     Telefono:
                 </td>
@@ -80,18 +90,14 @@
                 <td>
                     <asp:TextBox ID="txtPassword2" type="password" runat="server"></asp:TextBox>
                 </td>
+                
             </tr>
         </table>
         <ul>
+        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
             <asp:Button ID="Button1" runat="server" Text="Crear cuenta" BackColor="#221100" BorderColor="#221100"
                 Height="50" Width="100" ForeColor="White" onclick="Button1_Click" />
         </ul>
-        <!--<asp:Label
-    AssociatedControlID="txtFecha" 
-    ID="Label1" 
-    runat="server">
-</asp:Label>-->
-&nbsp;
          </div>
     </div>
 </asp:Content>

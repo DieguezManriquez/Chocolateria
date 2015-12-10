@@ -21,15 +21,13 @@ namespace Chocoloco
         protected void Button1_Click(object sender, EventArgs e)
         {
 
-            
+
             string rut = txtRut.Text;
-
-            //DateTime fecha = DateTime.Parse(txtFecha.Text);
-
-            Persona p = choco.Persona.FirstOrDefault(x => x.per_rut == rut); 
-            Response.Write("<script>alert(fecha)</script>");
+            Persona p = choco.Persona.FirstOrDefault(x => x.per_rut == rut);
             if (p == null)
             {
+                string fecha = txtfecha.Value;
+                DateTime fecha1 = DateTime.Parse(txtfecha.Value);
                 Persona per = new Persona();
                 per.per_rut = txtRut.Text;
                 per.per_nombre = txtNombre.Text;
@@ -37,8 +35,8 @@ namespace Chocoloco
                 per.per_apellidoM = txtApM.Text;
                 per.per_direccion = txtDireccion.Text;
                 per.per_telefono = int.Parse(txtTelefono.Text);
-                //per.per_fechaNac = fecha;
-               // p.per_fechaNac = txtFecha.Text;
+                per.per_fechaNac = fecha1; ;
+
                 choco.Persona.AddObject(per);
                 Usuario u = new Usuario();
                 u.usu_nombre = txtNombre.Text;
@@ -56,6 +54,7 @@ namespace Chocoloco
             {
                 Response.Write("<script>alert('Rut ya registrado')</script>");
             }
+
         }
     }
 }
